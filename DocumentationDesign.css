@@ -576,6 +576,7 @@ margin-left: 32px;
     color:white;
     text-align: justify;
     margin:20px;
+    padding-right: 20px;
 }
 
 .linkA{
@@ -742,6 +743,7 @@ margin-left: 32px;
 .featuresUl{
     align-self: flex-start;
     margin-left: 20px;
+    margin-right: 25px;
 }
 
 
@@ -962,9 +964,9 @@ margin-left: 32px;
             .overlayContentP{
                 color: white;
                 font-family: 'OpnSnsHbrw';
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 margin-right: auto;
-                margin-left: 13%;
+                margin-left: 7%;
                 max-width: 80%;
             }
 
@@ -1037,6 +1039,7 @@ margin-left: 32px;
     max-width: 1280px;
     width: 100%;
     margin: 3% auto;
+    padding: 0 20px;
 }
 
 .supportedFilesTitleH2{
@@ -1096,6 +1099,7 @@ margin-left: 32px;
     font-weight:500;
     font-size: 1.9rem;
     margin-right: auto;
+    padding: 0 10px;
     /* padding-top: 5%; */
 }
 
@@ -1114,6 +1118,7 @@ margin-left: 32px;
     font-weight:400;
     font-size: 1.5rem;
     margin-right: auto;
+    padding: 0 5px;
 }
 
 .categoryBaseImg{
@@ -1184,6 +1189,7 @@ margin-left: 32px;
     font-size:1.3rem;    
     color:white;
     font-weight: 400;
+    padding: 0 20px;
     /* text-align: justify; */
     /* margin:20px; */
     /* margin-bottom: 10%; */
@@ -1308,6 +1314,7 @@ margin-left: 32px;
     width: 100%;
     display: flex;
     margin-bottom:3% ;
+    padding: 0 5px;
 }
 
 .imagesContainerDiv{
@@ -1334,7 +1341,8 @@ margin-left: 32px;
     font-size:1.5rem;    
     color:white;
     font-weight: 400;
-    margin:3% auto 1% 0 ; 
+    margin:3% auto 1% 0;
+    padding: 5px 10px; 
 }
 
 .screenShotFolderSelectionImg,.screenShotMultiSelectionImg{
@@ -1537,6 +1545,7 @@ margin-left: 32px;
         padding-left: 0;
     }
     .appName{
+        font-size: 2.2rem;
         margin-left: 0;
         text-align: center;
         padding-left:0;
@@ -1560,7 +1569,12 @@ margin-left: 32px;
         margin-top: 0;
         margin-left: 0;
     }
-
+    .overlayElementContainerDiv{
+        flex-direction: column;
+    }
+    .instlInstrcnDwnldButt{
+        margin: 5% 4% 3% auto;
+    }
     .posterContainerDiv{
         display: flex;
         flex-direction: column;
@@ -1578,16 +1592,19 @@ margin-left: 32px;
         display: none;
     }       
     .learnMoreA{
+        display: none;
+    }
+    .overlayButtA{
         justify-self: flex-end;
         border: 1px solid white;
         font-family: 'OpnSnsHbrw';
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         color: white; 
         font-weight: 400;
         color: white;
-        padding: 20px 30vw;
+        padding: 15px 25vw;
         text-decoration: none;
-        margin: auto 4% 2% 4%;
+        margin: 3% 4% 5% 4%;
         transition: all 0.3s ease;
         white-space: nowrap;
     }
@@ -1595,9 +1612,20 @@ margin-left: 32px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-right: 30px;
+    }
+    .overlayTitleH3{
+        font-size: 2.5rem;
+    }
+    .SetUpANFPoverlayTitleH3{
+        margin: auto auto 0% 13%;
+        font-size: 2rem;
+    }
+    .tutorialTitleDiv{
+        height: 180px;
     }
 }
- 
+   
 @media(max-width:668px){
     html{
         font-size: 11px;
