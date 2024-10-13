@@ -505,8 +505,7 @@ background: linear-gradient(282.37deg, #630572 2.26%, #000000 99.63%);
 
 .WlComScrnDnldButt{
     flex: none;
-    width: 225px;
-    height: 50px;
+    padding: 15px 80px;
     margin-top:15%;
     float:left;
     margin-left:10%;
@@ -516,6 +515,11 @@ background: linear-gradient(282.37deg, #630572 2.26%, #000000 99.63%);
     border: none;
     font-family: 'OpnSnsHbrw';
     font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.WlComScrnDnldButt:hover{
+    background-color: #a4a4a4;
 }
 
 .imageContainer{
@@ -1492,6 +1496,67 @@ margin-left: 32px;
 .InternalP{
     display: flex;
     flex-wrap: wrap;
+}
+
+
+/*DownloadDemoFilesHTML*/
+.DnldTblDiv{
+    max-width: 930px;
+    width: 100%;
+    margin: 5% auto;
+    padding: 0 20px;
+}
+
+.dnldItemDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dnldItemDiv>h2{
+    margin: auto auto auto 10%;
+}
+
+.SpacerSpan{
+    display: block;
+    background-color: #B9B9B9;
+    max: width 927px;
+    width: 100%;
+    height: 1px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-self: center;
+}
+
+.DnldButt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+.FileSizeH5{
+    color: white;
+    font-family: 'OpnSnsHbrw';
+    margin-top: 7px; 
+    font-size: 0.75rem;
+    align-self: center;
+}
+
+.FileTypeIconImg{
+    max-width: 67px;
+    max-height: 80px;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+.DnldIconImg{
+    max-width: 50px;
+    max-height: 45px;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    padding-top: 30%;
 }
 
 @media (max-width:910px){
