@@ -1514,12 +1514,16 @@ margin-left: 32px;
 
 .dnldItemDiv>h2{
     margin: auto auto auto 10%;
+    color: white;
+    font-family:'OpnSnsHbrw';
+    font-weight:500;
+    font-size: 1.3rem;
 }
 
 .SpacerSpan{
     display: block;
     background-color: #B9B9B9;
-    max: width 927px;
+    max-width:927px;
     width: 100%;
     height: 1px;
     margin-top: 2%;
