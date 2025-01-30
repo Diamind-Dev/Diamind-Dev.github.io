@@ -793,8 +793,8 @@ margin-left: 200px;
 
 /* sliderDiv for presenting the preveiew images with slide show in media query less than 804px           */
             .sliderDiv{
-                margin-top: 5%;
-                margin-bottom: 5%;
+                margin-top: 350px;
+                margin-bottom: 350px;
                 display: none;
                 flex: 2;
                 max-width: 568px;
@@ -1773,6 +1773,12 @@ margin-left: 200px;
     word-break: break-all;
 }
 
+@media(max-width: 1280px){
+    .HeroColumn{
+        margin-top: 10%;
+    }
+}
+
 @media (max-width:910px){
     #ANFPLogo{
            display:none;
@@ -1784,14 +1790,7 @@ margin-left: 200px;
         margin-right: 0;
     }
     .introductionDiv{
-        width: 90vw;
-        /* max-width: 1300px;
-        display: block;
-        padding-top: 1%;
-        margin:120px auto 0 auto;
-        background-color: aquamarine;
-        position: absolute;
-        left: 50%; */
+        width: 95vw;
     }
     .installInstructionDiv{
         background-color: #1D1D1D;
@@ -1831,7 +1830,7 @@ margin-left: 200px;
     .HeroColumn{
         display: flex;
         flex-direction: column;
-        margin-left: 0;
+        margin: 10% auto;
         align-items: center;
     }
     .imageContainerMobile{
