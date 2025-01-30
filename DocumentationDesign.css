@@ -1783,6 +1783,16 @@ margin-left: 200px;
     .iconContainerA{
         margin-right: 0;
     }
+    .introductionDiv{
+        width: 90vw;
+        /* max-width: 1300px;
+        display: block;
+        padding-top: 1%;
+        margin:120px auto 0 auto;
+        background-color: aquamarine;
+        position: absolute;
+        left: 50%; */
+    }
     .installInstructionDiv{
         background-color: #1D1D1D;
         background-size: 100% 100%;
