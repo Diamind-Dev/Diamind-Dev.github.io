@@ -1775,7 +1775,7 @@ margin-left: 200px;
 
 @media(max-width: 1280px){
     .HeroColumn{
-        margin-top: 10%;
+        margin-top: 15%;
     }
 }
 
@@ -1830,7 +1830,7 @@ margin-left: 200px;
     .HeroColumn{
         display: flex;
         flex-direction: column;
-        margin: 10% auto;
+        margin: 20% auto;
         align-items: center;
     }
     .imageContainerMobile{
