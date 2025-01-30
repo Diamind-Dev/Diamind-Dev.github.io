@@ -125,6 +125,7 @@ ul.navigationUl li{
     font-family:'OpnSnsHbrw';
     font-size: 1rem;
 }
+
 .dropDownMenuContainerDiv{
     display: flex;
     position: absolute;
@@ -1767,6 +1768,9 @@ margin-left: 200px;
     height: 100%;
     align-self: center;
     padding-top: 30%;
+}
+.DnldNameH2{
+    word-break: break-all;
 }
 
 @media (max-width:910px){
