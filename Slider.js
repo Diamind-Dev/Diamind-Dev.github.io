@@ -100,30 +100,6 @@ document.addEventListener("DOMContentLoaded", () =>{
       discountBttn.style.boxShadow = `0px 0px ${shadowIntensity}px ${shadowSpread}px rgba(255, 0, 255, 0.8)`;
     }, 1000);}
 
-  
-
-    function setBr(){
-      let demoUEName = document.getElementById("UEProjectName");
-      let demoAppName = document.getElementById("demoAppName");
-      let isMobVewLes428= window.matchMedia("(max-width:428px)").matches;
-      let isMobVewLes340 = window.matchMedia("(max-width:340px)").matches;
-      console.log("isMobileViewLessThan340px:", isMobVewLes340); // Check if the media query
-      console.log("isMobileViewLessThan428px:", isMobVewLes428); // Check if the media query
-      if(isMobVewLes428 && isMobVewLes340){
-        demoUEName.innerHTML = "ANFP_Demo_UE<br>_ModereatorFiles",
-        demoAppName.innerHTML = "ANFP_Demo_APK<br>_v1.0";
-      }else if(isMobVewLes428){
-        demoUEName.innerHTML = "ANFP_Demo_UE<br>_ModereatorFiles",
-        demoAppName.innerHTML = "ANFP_Demo_APK_v1.0";
-      }else 
-        demoUEName.innerHTML = "ANFP_Demo_UE_ModereatorFiles",
-        demoAppName.innerHTML = "ANFP_Demo_APK_v1.0";
-    }
-    
-    setBr();
-    window.addEventListener("resize" , setBr);
-
-    console.log("Script loaded and DOMContentLoaded event attached.");
   });
   
 
