@@ -2040,7 +2040,7 @@ margin-left: 200px;
         text-align: center;
         font-size: 3rem;
         padding: 0;
-        margin-top: 30%;
+        margin-top: 9%;
     }
     #secondDiscountDescription{
         position: relative;
@@ -2094,7 +2094,7 @@ margin-left: 200px;
         text-align: center;
         font-size: 2.8rem;
         padding: 0;
-        margin-top: 40%;
+        margin-top: 10%;
     }
     #secondDiscountDescription{
         width: 90%;
@@ -2105,7 +2105,7 @@ margin-left: 200px;
     }
     #discountTimer{
         font-size: 2.3rem;
-        margin-top: 17%;
+        margin-top: 7%;
     }
     #discountBttn{
         font-size: 1.5rem;
@@ -2114,7 +2114,7 @@ margin-left: 200px;
         bottom: 0;
         right: 0;
         padding:5% 30%;
-        margin-top:20% 
+        margin-top:10% 
     }
 }
 @media(max-width:300px){
