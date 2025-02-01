@@ -2118,7 +2118,7 @@ margin-left: 200px;
     }
     .LaunchOffer{
         font-weight: 300;
-        margin-top: 30%;
+        margin-top: 20%;
         text-align: center;
         font-size: 2.8rem;
         padding: 0;
@@ -2141,7 +2141,7 @@ margin-left: 200px;
         bottom: 0;
         right: 0;
         padding:3% 25%;
-        margin-top:20% 
+        margin-top:5% 
     }
 }
 @media(max-width:300px){
