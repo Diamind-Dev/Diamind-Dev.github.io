@@ -1828,12 +1828,12 @@ margin-left: 200px;
     .discountPosterOverlayContentVertical{
         display: flex;
         flex-direction: column;
-        gap: 25%;
+        gap: 18%;
     }
     .discountOverlayContentHorizontal_Vertical{
         display: flex;
         flex-direction: column;
-        gap: 15%;
+        gap: 12%;
     }
     #discountDescription{
         display: none;
