@@ -684,6 +684,7 @@ margin-left: 200px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 .closePopupBttn{
     right: 0;
@@ -745,8 +746,8 @@ margin-left: 200px;
 }
 #discountTimer{
     position: absolute;
-    bottom: 7%;
-    left: 32%;
+    bottom: -10px;
+    left: 242px;
     padding: 5%;
     font-family: "OpnSnsHbrw";
     font-weight: 400;
@@ -1809,12 +1810,6 @@ margin-left: 200px;
     .iconContainerA{
         margin-right: 0;
     }
-    /* .discountPosterTablet_Mobile{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    } */
  
     .discountPosterDesktop{
         background-image:url('assets/Graphs/FirstMonthOfferTablet.png') ; 
@@ -1825,8 +1820,15 @@ margin-left: 200px;
         border: #DADADA 2px solid;
         border-radius: 15px;
     }
-    .discountOverlayContentHorizontal_Vertical{
+    .discountPosterOverlayContentVertical{
+        display: flex;
         flex-direction: column;
+        gap: 12%;
+    }
+    .discountOverlayContentHorizontal_Vertical{
+        display: flex;
+        flex-direction: column;
+        gap: 5%; 
     }
     #discountDescription{
         display: none;
@@ -1837,14 +1839,12 @@ margin-left: 200px;
         text-align: center;
         font-size: 3rem;
         padding: 0;
-        margin-top: 4%;
     }
     #discountTimer{
         position: relative;
         align-self: center;
         bottom: 0;
         left: 0;
-        margin-top: 5%;
     }
     #discountBttn{
         position: relative;
@@ -1853,7 +1853,6 @@ margin-left: 200px;
         bottom: 0;
         right: 0;
         padding:15px 100px;
-        margin-top: 5%;
     }
     .introductionDiv{
         width: 95vw;
@@ -1944,16 +1943,25 @@ margin-left: 200px;
     }
     .LaunchOffer{
         font-size: 3.5rem;
-        margin-top: 12%;
+    }
+    #secondDiscountDescription{
+        position: relative;
+        align-self: center;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        display: block;
+        color: white;
+        font-weight: 500;
+        font-size: 1.7rem;
+        font-family: 'inter';
     }
     #discountTimer{
         font-size: 2.5rem;
-        margin-top: 5%;
     }
     #discountBttn{
         font-size: 1.7rem;
         padding:15px 100px;
-        margin-top: 5%;
     }
     .overlayElementContainerDiv{
         flex-direction: column;
@@ -2035,43 +2043,6 @@ margin-left: 200px;
         width: 90vw;
         height: 80vh;
     }
-    .LaunchOffer{
-        font-weight: 300;
-        margin: 3% auto;
-        text-align: center;
-        font-size: 3rem;
-        padding: 0;
-        margin-top: 19%;
-    }
-    #secondDiscountDescription{
-        position: relative;
-        align-self: center;
-        text-align: center;
-        bottom: 0;
-        left: 0;
-        display: block;
-        color: white;
-        font-weight: 500;
-        font-size: 1.7rem;
-        font-family: 'inter';
-        margin-top: 10%;
-    
-    }
-    #discountTimer{
-        position: relative;
-        align-self: center;
-        bottom: 0;
-        left: 0;
-        margin-top: 7%;
-    }
-    #discountBttn{
-        position: relative;
-        align-self: center;
-        bottom: 0;
-        right: 0;
-        padding:15px 100px;
-        margin: 5% auto;
-    }
 }
 @media(max-width:480px){
     .discountPosterTablet_Mobile{
@@ -2086,39 +2057,6 @@ margin-left: 200px;
     }
     .LaunchOffer{
         font-weight: 300;
-        margin-top: 25%;
-        text-align: center;
-        font-size: 2.8rem;
-        padding: 0;
-    }
-    #secondDiscountDescription{
-        width: 90%;
-        font-size: 1.8rem;
-        font-family: 'inter';
-        margin-top: 15%;
-    
-    }
-    #discountTimer{
-        font-size: 2.3rem;
-        margin-top: 7%;
-    }
-    #discountBttn{
-        font-size: 1.5rem;
-        position: relative;
-        align-self: center;
-        bottom: 0;
-        right: 0;
-        padding:3% 25%;
-        margin-top:7% 
-    }
-}
-@media(max-width:400px){
-    .discountPosterTablet_Mobile{
-        margin-top: 380%;
-    }
-    .LaunchOffer{
-        font-weight: 300;
-        margin-top: 10%;
         text-align: center;
         font-size: 2.8rem;
         padding: 0;
@@ -2127,12 +2065,10 @@ margin-left: 200px;
         width: 90%;
         font-size: 1.2rem;
         font-family: 'inter';
-        margin-top: 7%;
-    
     }
     #discountTimer{
         font-size: 1.8rem;
-        margin-top: 0;
+       
     }
     #discountBttn{
         font-size: 1.5rem;
@@ -2141,8 +2077,13 @@ margin-left: 200px;
         bottom: 0;
         right: 0;
         padding:3% 25%;
-        margin: top 0; 
     }
+}
+@media(max-width:400px){
+    .discountPosterTablet_Mobile{
+        margin-top: 380%;
+    }
+   
 }
 @media(max-width:300px){
     .discountPosterTablet_Mobile{
