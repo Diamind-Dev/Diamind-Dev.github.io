@@ -1826,11 +1826,11 @@ margin-left: 200px;
         border-radius: 15px;
     }
     .discountPosterOverlayContentVertical{
-        gap: 10%;
+        gap: 15%;
     }
     .discountOverlayContentHorizontal_Vertical{
         flex-direction: column;
-        /* gap: 10%; */
+        gap: 10%;
     }
     #discountDescription{
         display: none;
