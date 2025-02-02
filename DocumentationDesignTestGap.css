@@ -1825,9 +1825,12 @@ margin-left: 200px;
         border: #DADADA 2px solid;
         border-radius: 15px;
     }
+    .discountPosterOverlayContentVertical{
+        gap: 10%;
+    }
     .discountOverlayContentHorizontal_Vertical{
         flex-direction: column;
-        gap: 20%;
+        /* gap: 10%; */
     }
     #discountDescription{
         display: none;
