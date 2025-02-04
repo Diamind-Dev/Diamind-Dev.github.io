@@ -1957,7 +1957,7 @@ discount PosterPopup^^^^^^^
         margin-right: 0;
     }
  
-    .discountPosterDesktop{
+    .discountPosterDesktop, .discountPosterDesktopPopup{
         background-image:url('assets/Graphs/FirstMonthOfferTablet.png') ; 
         width: 512px;
         height: 570px;
@@ -1976,7 +1976,7 @@ discount PosterPopup^^^^^^^
         flex-direction: column;
         gap: 5%; 
     }
-    #discountDescription{
+    #discountDescription, #discountDescriptionPopup{
         display: none;
     }
     .LaunchOffer{
@@ -1986,13 +1986,13 @@ discount PosterPopup^^^^^^^
         font-size: 3rem;
         padding: 0;
     }
-    #discountTimer{
+    #discountTimer, #discountTimerPopup{
         position: relative;
         align-self: center;
         bottom: 0;
         left: 0;
     }
-    #discountBttn{
+    #discountBttn, #discountBttnPopup{
         position: relative;
         align-self: center;
         font-size: 1.7rem;
@@ -2090,7 +2090,7 @@ discount PosterPopup^^^^^^^
     .LaunchOffer{
         font-size: 3.5rem;
     }
-    #secondDiscountDescription{
+    #secondDiscountDescription, #secondDiscountDescriptionPopup{
         position: relative;
         align-self: center;
         text-align: center;
@@ -2102,10 +2102,10 @@ discount PosterPopup^^^^^^^
         font-size: 1.7rem;
         font-family: 'inter';
     }
-    #discountTimer{
+    #discountTimer, #discountTimerPopup{
         font-size: 2.5rem;
     }
-    #discountBttn{
+    #discountBttn, #discountBttnPopup{
         font-size: 1.7rem;
         padding:15px 100px;
     }
@@ -2189,6 +2189,10 @@ discount PosterPopup^^^^^^^
         width: 90vw;
         height: 80vh;
     }
+    .discountPosterTablet_MobilePopup{
+        width: 90vw;
+        height: 80vh;
+    }
 }
 @media(max-width:480px){
     .discountPosterTablet_Mobile{
@@ -2207,16 +2211,16 @@ discount PosterPopup^^^^^^^
         font-size: 2.8rem;
         padding: 0;
     }
-    #secondDiscountDescription{
+    #secondDiscountDescription, #secondDiscountDescriptionPopup{
         width: 90%;
         font-size: 1.2rem;
         font-family: 'inter';
     }
-    #discountTimer{
+    #discountTimer, #discountTimerPopup{
         font-size: 1.8rem;
        
     }
-    #discountBttn{
+    #discountBttn, #discountBttnPopup{
         font-size: 1.5rem;
         position: relative;
         align-self: center;
