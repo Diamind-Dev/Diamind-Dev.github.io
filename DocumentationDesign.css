@@ -725,10 +725,10 @@ discount PosterPopup vvvvvvvvvv
 }
 
 #closePopupBttnPopup{
-    position: absolute;
+    position: fixed;
     display: flex;
-    right: 50px;
-    top: 20px;
+    right: 1%;
+    top: 2%;
     background: transparent;
     border: none;
     justify-items: center;
