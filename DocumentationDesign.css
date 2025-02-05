@@ -1957,12 +1957,19 @@ discount PosterPopup^^^^^^^
         margin-right: 0;
     }
  
-    .discountPosterDesktop, .discountPosterDesktopPopup{
+    .discountPosterDesktop{
         background-image:url('assets/Graphs/FirstMonthOfferTablet.png') ; 
         width: 512px;
         height: 570px;
         position: relative;
         margin-top: 1000px;
+        border: #DADADA 2px solid;
+        border-radius: 15px;
+    }
+    .discountPosterDesktopPopup{
+        background-image:url('assets/Graphs/FirstMonthOfferTablet.png') ; 
+        width: 512px;
+        height: 570px;
         border: #DADADA 2px solid;
         border-radius: 15px;
     }
