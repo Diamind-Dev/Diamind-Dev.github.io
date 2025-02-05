@@ -691,6 +691,20 @@ discount PosterPopup vvvvvvvvvv
     height: 100vh;
     z-index: 999;
 }
+#closePopupBttn{
+    position: fixed;
+    display: flex;
+    right: 1%;
+    top: 1%;
+    background: transparent;
+    border: none;
+    justify-items: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+
 .closeBttn{
     display: flex;
     width: 5px;
@@ -722,19 +736,6 @@ discount PosterPopup vvvvvvvvvv
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-#closePopupBttnPopup{
-    position: fixed;
-    display: flex;
-    right: 1%;
-    top: 2%;
-    background: transparent;
-    border: none;
-    justify-items: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
 }
 
 #OffPercentagePopup{
@@ -824,18 +825,7 @@ discount PosterPopup^^^^^^^
     justify-content: center;
 }
 
-#closePopupBttn{
-    position: absolute;
-    display: flex;
-    right: 50px;
-    top: 20px;
-    background: transparent;
-    border: none;
-    justify-items: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-}
+
 .discountPosterOverlayContentVertical{
     flex: 3;
     width: 100%;
