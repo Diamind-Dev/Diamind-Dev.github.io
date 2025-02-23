@@ -1047,7 +1047,7 @@ discount PosterPopup^^^^^^^
     margin: 3% 0;
     /* width: 100vw; */
     max-width: 1920px;
-    width: 80%;
+    /* width: 80%; */
     align-self: center;
     justify-content: center;
 }
@@ -2154,6 +2154,9 @@ discount PosterPopup^^^^^^^
     .gifWrapper{
         margin: 0 7%;
     }
+    .featuresDiv{
+        width: 100%;
+    }
    }
 
 @media (max-width:804px){
@@ -2322,6 +2325,7 @@ discount PosterPopup^^^^^^^
     .discountPosterTablet_Mobile{
         margin-top: 1850px;
     }
+
 }
 @media(max-width:560px){
     .discountPosterTablet_Mobile{
@@ -2333,6 +2337,10 @@ discount PosterPopup^^^^^^^
     .discountPosterTablet_MobilePopup{
         width: 90vw;
         height: 80vh;
+    }
+    .introGif{
+        height: 50vh;
+        border-radius: 15px;
     }
 }
 @media(max-width:480px){
