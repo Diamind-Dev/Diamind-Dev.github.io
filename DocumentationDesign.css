@@ -1036,7 +1036,26 @@ discount PosterPopup^^^^^^^
     width: 80%;
     align-self: center;
     justify-content: center;
-}            
+}    
+
+
+.gifSectionTightWidth{
+    padding: 0 20%;
+    display: none;
+    /* display: flex;
+    flex-direction: column; */
+    margin: 3% 0;
+    /* width: 100vw; */
+    max-width: 1920px;
+    width: 80%;
+    align-self: center;
+    justify-content: center;
+}
+.horizontalGifContainer{
+    display: flex;
+    margin: 7% 3%;
+    justify-content: center;
+}
 
 .GifTxtContainer{
     /* max-width: 500px; */
@@ -1116,7 +1135,7 @@ discount PosterPopup^^^^^^^
     display: flex;
     text-decoration: none;
     padding: 0 15px;
-    border: 3px solid rgb(103, 103, 103);
+    border: 2px solid rgb(103, 103, 103);
     border-radius: 10px;
     transition: all 0.3s ease;
 }
@@ -2125,6 +2144,16 @@ discount PosterPopup^^^^^^^
     .discordButtA{
         font-size: 1.2rem;
     }
+    .gifSection{
+        display: none;
+    }
+    .gifSectionTightWidth{
+        display: flex;
+        flex-direction: column; 
+    }
+    .gifWrapper{
+        margin: 0 7%;
+    }
    }
 
 @media (max-width:804px){
@@ -2350,5 +2379,16 @@ discount PosterPopup^^^^^^^
 @media(max-width:300px){
     .discountPosterTablet_Mobile{
         margin-top: 400%;
+    }
+}
+
+@media(max-height:803px){
+    .introGif{
+        border-radius: 15px;
+    }
+}
+@media(max-height:380px){
+    .introGif{
+        border-radius: 10px;
     }
 }
