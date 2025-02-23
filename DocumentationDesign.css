@@ -1041,7 +1041,7 @@ discount PosterPopup^^^^^^^
 .GifTxtContainer{
     /* max-width: 500px; */
     padding: 0 5%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
 }
 
 .underTitle{
@@ -1106,6 +1106,7 @@ discount PosterPopup^^^^^^^
 }
 
 .linkButtons{
+    justify-content: center;
     display: flex;
     margin-top: 10%;
 }
