@@ -37,7 +37,7 @@
 // }
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
   // Get elements
   let popupOverlay = document.getElementById("discountPopupOverlay");
   let discountPoster = document.getElementById("discountFrame");
@@ -111,7 +111,7 @@ function countingDownTimer(expirationTime, frameId, timerId, discountBttnId){
     }, 1000);}
   }
 });
-
+*/
 
 
 document.addEventListener("DOMContentLoaded", () =>{ 
