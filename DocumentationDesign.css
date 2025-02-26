@@ -2228,6 +2228,9 @@ discount PosterPopup^^^^^^^
         margin-top: 0;
         margin-left: 0;
     }
+    .introductionDiv{
+        margin-top: 170%;
+    }
     .discountPosterTablet_Mobile{
         margin-top: 2200px;
     }
