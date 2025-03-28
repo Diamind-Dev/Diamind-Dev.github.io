@@ -42,7 +42,6 @@
                                     <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
                                     <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
                                 </ul>
-    
                             </div>
                             <div class="mobileListSectionContainerDiv">
                                 <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
@@ -108,11 +107,11 @@
                                 </div>
                                 <div class="listSectionContainerDiv">
                                     <h2 class="DDMSubTitleH2">File Types</h2>
-                                        <ul class="ListUl DDMListContainerDiv">
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#SupportedFilesListH2">supported file types</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
-                                        </ul>
+                                    <ul class="ListUl DDMListContainerDiv">
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#SupportedFilesListH2">supported file types</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
+                                    </ul>
                                 </div>
                                 <div class="listSectionContainerDiv">
                                     <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
@@ -134,131 +133,38 @@
     <main class="tutorialMain">
         <div class="tutorialTitleDiv">
             <div class="titleContainerDiv">
-                <h1>Filtering File Types & Supported Files</h1>
+                <h1>ANFP Eco Tutorial</h1>
             </div>
         </div>
         <div class="filteringIntroductionDiv">
-            <p class="articleP">In this tutorial, you'll learn how to configure a filter for supported files. You can set this filter based on
-                <a class="linkA" href="#categoryBaseH2"> general file type categories </a>or<a class="linkA" href="#detailedBaseH2"> specify detailed file extensions.</a>The following lists collect the supported file types, which you can customize using UE Blueprints.</p>
+            <p class="articleP">In this tutorial there are 2 sections. In the first section you will learn how to set up Android Native File Picker Eco for <a class="linkA" href="#OpenFilePicker">opening file picking dialog</a> and how to <a class="linkA" href="#RetrieveFilePath">retrieve paths</a> in the next one.</p>
         </div>
-        <div class="SupportedFilesDiv" id="SupportedFilesListH2">
-            <h2 class="supportedFilesTitleH2" >Supported File Types</h2>
-            <div class="listsContainerDiv">
-                <div class="fileListContainerDiv">
-                    <h2 class="fileCategoryH2">Application</h2>
-                    <ul class="fileTypeListUl">
-                        <li class="fileTypeItemLi">zip</li>
-                        <li class="fileTypeItemLi">js</li>
-                        <li class="fileTypeItemLi">tar</li>
-                        <li class="fileTypeItemLi">exe</li>
-                        <li class="fileTypeItemLi">dll</li>
-                        <li class="fileTypeItemLi">json</li>
-                        <li class="fileTypeItemLi">xml</li>
-                        <li class="fileTypeItemLi">apk</li>
-                        <li class="fileTypeItemLi">iso</li>
-                        <li class="fileTypeItemLi">torrent</li>
-                        <li class="fileTypeItemLi">tmp</li>
-                        <li class="fileTypeItemLi">sh</li>
-                        <li class="fileTypeItemLi">bat</li>
-                        <li class="fileTypeItemLi">jar</li>
-                        <li class="fileTypeItemLi">lib</li>
-                        <li class="fileTypeItemLi">obj</li>
-                        <li class="fileTypeItemLi">so</li>
-                        <li class="fileTypeItemLi">bin</li>
-                    </ul>
-                </div>
-                <div class="fileListContainerDiv">
-                    <h2 class="fileCategoryH2">Video</h2>
-                    <ul class="fileTypeListUl">
-                        <li class="fileTypeItemLi">mp4</li>
-                        <li class="fileTypeItemLi">mov</li>
-                        <li class="fileTypeItemLi">mkv</li>
-                        <li class="fileTypeItemLi">m4v</li>
-                        <li class="fileTypeItemLi">avi</li>
-                        <li class="fileTypeItemLi">wmv</li>
-                        <li class="fileTypeItemLi">flv</li>
-                        <li class="fileTypeItemLi">f4v</li>
-                        <li class="fileTypeItemLi">webm</li>
-                        <li class="fileTypeItemLi">avchd</li>
-                        <li class="fileTypeItemLi">amv</li>
-                        <li class="fileTypeItemLi">ogv</li>
-                    </ul>
-                </div>
-                <div class="fileListContainerDiv">
-                    <h2 class="fileCategoryH2">Audio</h2>
-                    <ul class="fileTypeListUl">
-                        <li class="fileTypeItemLi">mp3</li>
-                        <li class="fileTypeItemLi">wav</li>
-                        <li class="fileTypeItemLi">tta</li>
-                        <li class="fileTypeItemLi">opus</li>
-                        <li class="fileTypeItemLi">ogg</li>
-                        <li class="fileTypeItemLi">aac</li>
-                        <li class="fileTypeItemLi">alac</li>
-                        <li class="fileTypeItemLi">flac</li>
-                    </ul>
-                </div>
-                <div class="fileListContainerDiv">
-                    <h2 class="fileCategoryH2">Document</h2>
-                    <ul class="fileTypeListUl">
-                        <li class="fileTypeItemLi">pdf</li>
-                        <li class="fileTypeItemLi">doc</li>
-                        <li class="fileTypeItemLi">docx</li>
-                        <li class="fileTypeItemLi">xls</li>
-                        <li class="fileTypeItemLi">xlsx</li>
-                        <li class="fileTypeItemLi">ppt</li>
-                        <li class="fileTypeItemLi">odt</li>
-                        <li class="fileTypeItemLi">epub</li>
-                    </ul>
-                </div>
-                <div class="fileListContainerDiv">
-                    <h2 class="fileCategoryH2">Image</h2>
-                    <ul class="fileTypeListUl">
-                        <li class="fileTypeItemLi">png</li>
-                        <li class="fileTypeItemLi">jpg</li>
-                        <li class="fileTypeItemLi">gif</li>
-                        <li class="fileTypeItemLi">tiff</li>
-                        <li class="fileTypeItemLi">svg</li>
-                        <li class="fileTypeItemLi">webp</li>
-                        <li class="fileTypeItemLi">bmp</li>
-                        <li class="fileTypeItemLi">exr</li>
-                    </ul>
-                </div>
-                <div class="fileListContainerDiv">
-                    <h2 class="fileCategoryH2">Font</h2>
-                    <ul class="fileTypeListUl">
-                        <li class="fileTypeItemLi">ttf</li>
-                        <li class="fileTypeItemLi">otf</li>
-                        <li class="fileTypeItemLi">fnt</li>
-                        <li class="fileTypeItemLi">woff</li>
-                        <li class="fileTypeItemLi">eof</li>
-                        <li class="fileTypeItemLi">svg</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <img src="assets\filterTutorialPoster.svg" class="FilteringPosterImg" alt="FileTypesPoster"/>
-        <div class="setUpFilterDiv">
-            <h1 class="articleTitleH1">Setting Filter</h1>
+        <!-- <img src="assets\filterTutorialPoster.svg" class="FilteringPosterImg" alt="FileTypesPoster"/> -->
+        <div class="setUpFilterDiv" id="OpenFilePicker">
+            <h1 class="articleTitleH1">Open File Picker</h1>
             <div class="categoryBaseDiv" id="categoryBaseH2">
-                <h2 class="filteringTypeH2" >General Category Base</h2>
-                <img src="assets\UpdatedImages\FilteringCategoryBase.png" class="categoryBaseImg" alt="FilteringBasedOnCategory"/>
-                <p class="articleP categoryFilteringP">Once you declare the supported file types, undeclared file types will be disabled.</p>
-                <img src="assets\UpdatedImages\SetupFilePickerAccordingToResultImage.png" class="setUpCatFilterImg" alt="FilteringBasedOnCategoryWithBlueprints"/>
-                <img src="assets\FilterResult.jpg" class="filterResultImg" alt="ImageOfTheResultOfFilteringFilesInANFP"/>
+                <!-- <h2 class="filteringTypeH2" >Open File Picker Blueprint Node</h2> -->
+                <img src="assets/ANFP_Eco/OpenFilePickerEco.png" class="setUpFilterDiv" alt="OpenFilePicker"/>
+                <!-- <p class="articleP categoryFilteringP">This node receives an enum as argument specifying selection mode in a file picking session.</p> -->
             </div>
-            <div class="DetailedBaseDiv" id="detailedBaseH2">
-                <h2 class="filteringTypeH2" >Specify Detailed Base</h2>
-                <img src="assets\UpdatedImages\SetUpFilePickerInDetail.png" class="FilterInDetailMusicImg" alt="SetUpInDetailFilterForMusicCategory"/>
-                <!-- <img src="assets\filterInDetailImage.png" class="FilterInDetailImageImg" alt="SetUpInDetailFilterForImageCategory"/> -->
-                <p class="articleP categoryFilteringP" >When you apply filters using both general categories and detailed file extensions of the same category, 
-                    the detailed file extension filters do not impact on the files.</p>
-                <img src="assets\UpdatedImages\LimitOfSettingBothTypeOfFiltering.png" class="filteringPointsImg" alt="FilteringNote_InterfereBetweenCategoryTypeAndDetailedType"/>
-                <p class="openningFilePickerWithoutSettingFilter">You can open the file pikcer without setting any filter 
-                    though<a class="highlightWord"> BUT </a>notice that if the file picker is
-                     opened _without a filter set_ 
-                    the file picker will include all existing file types, which may lead to some unexpected behavior later on.</p>
-                <img src="assets\UpdatedImages\OnlyOpenFilePickerWithoutFilter.png" class="OpeningFilePickerWithoutFilter" alt="Opening File Picker Without Filter"/>
-            </div>
+        </div>
+        <div class="setUpFilterDiv" id="RetrieveFilePath">
+            <h1 class="articleTitleH1">Retrieve File Path</h1>
+            <div class="categoryBaseDiv">
+                <img src="assets/ANFP_Eco/RetrieveFilePath.png" class="setUpFilterDiv" alt="RetrieveFilePath"/>
+                <p class="articleP categoryFilteringP">These nodes should always be called before open file picker especially Create Callback Object blueprint node.</p>
+                <img src="assets/ANFP_Eco/GetLastResult.png" class="setUpFilterDiv" alt="LastFilePickingResult"/>
+                <p class="articleP categoryFilteringP">This node returns result of the last file picking session.</p>
+                <img src="assets/ANFP_Eco/Utilities.png" class="setUpFilterDiv" alt="Utilities"/>
+                <p class="articleP categoryFilteringP">Using these nodes, you can retrieve an array of strings containing the file paths 
+                    of files copied from the Download and Document sections of the file picker.
+                    You can then reuse them or delete all at once using the Delete Files node.</p>
+                <p class="articleP categoryFilteringP">You might wonder why these files are copied.
+                     This happens because some files are not directly accessible (due to restricted access on certain devices),
+                      so they need to be copied to the app's internal data path. 
+                      The paths of these files are then returned using Event Dispatchers.
+                       With these nodes, you can easily manage those files.</p>    
+                </div>
         </div>
     </main>
     <script src="Slider.js"></script>

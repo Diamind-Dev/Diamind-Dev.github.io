@@ -132,26 +132,97 @@ ul.navigationUl li{
     position: absolute;
     top: 60px;
     left: 0;
+    height: 400px;
     width: 100%;
     background-color: #222;
-    justify-content: center;
+    /* justify-content: center; */
     visibility: hidden;
     /* transition: top 0.4 ease-in-out; */
 }
+.categoryMenu{
+    position: relative;
+    margin-left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+}
 .dropDownMenuTitleH1{
+    all: unset;
+    cursor: pointer;
     color: #D4D4D4;
-    font-size:1.6rem ;
+    background-color: #303030;
+    font-size:1.12rem ;
     font-family: 'Rlwy';
-    font-weight: 400;
-    padding-right: 5%;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 11.5px 102px 11.5px 34px;
+    margin-top: 15px;
     /* padding-top: 1%; */
     visibility: inherit;
 }
+
+
+/* Container for the radio group */
+.radio-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Hide the original radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Style the label to look like a button */
+  .radioBttn {
+    color: rgb(180, 180, 180);
+    font-family: 'Rlwy';
+    font-weight: 700;
+    padding: 10px 20px;
+    background-color: #e0e0e000;
+    border: 2px solid #cccccc00;
+    /* border-radius: 8px; */
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin: 5px 0;
+  }
+  
+  /* Hover effect */
+  .radioBttn:hover {
+    background-color: #303030;
+  }
+  
+  /* Style when the radio button is checked */
+  input[type="radio"]:checked + .radioBttn {
+    background-color: #424242;
+    color: #fff;
+    border-color: #4caf4f00;
+  }
+  
+
+
+
+.EcoMenuDiv{
+    display: none;
+    margin: 25px auto 40px 5%;
+    position: relative;
+}
+.ProMenuDiv{
+    position: relative;
+    display: none;
+    margin: 25px auto 40px 5%;
+    gap: 70px;
+}
+
+
 .listSectionContainerDiv{
     display: flex;
     flex-direction: column;
-    align-items: center;
-     padding-right: 3%;
+   
+    /* padding-right: 3%; */
     padding-top: 1%;
     padding-bottom: 3%;
     /* visibility: inherit; */
@@ -165,6 +236,7 @@ ul.navigationUl li{
 }
 
 .DDMSubTitleH2{
+    text-align: left;
     color: #D4D4D4;
     font-size:1.25rem ;
     font-family: 'Rlwy';
@@ -173,8 +245,8 @@ ul.navigationUl li{
     white-space: nowrap;
 }
 .DDMListContainerDiv{
-    display: flex;
-    justify-content: flex-start;
+    /* display: flex; */
+    /* justify-content: flex-start; */
     /* padding-right: 10%; */
 }
 
@@ -189,14 +261,16 @@ ul.navigationUl li{
     /* display: flex;
     flex-direction: column;
     align-items: flex-start; */
-    padding-top: 5%;
-    padding-left: 10px;
+    /* padding-top: 5%; */
     visibility: inherit;
+    padding-left: 0;
 }
 
 .DDMListItemsLi{
-    margin-top: 10%;
+    text-align: start;
+    margin-top: 20px; 
     list-style: none;
+    padding-left: 0;
     /* padding: space-around; */
 }
 .DDMItemA{
@@ -399,7 +473,7 @@ ul.navigationUl li{
         justify-content: space-around;
         padding-top: 0;
         /* padding-bottom: 15px; */
-        padding-left: 25px;
+        /* padding-left: 25px; */
     }
 
     .DDMSubTitleH2{
@@ -1248,6 +1322,92 @@ discount PosterPopup^^^^^^^
     text-align: justify;
 }
 
+
+.compareSection{
+    display: flex;
+    gap: 20vw;
+}
+.priceDiv {
+    border: 0.94px solid white;
+    border-radius: 20px;
+    background-color: #000000;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+.ecoDiv{
+    /* Neon Glow Effect */
+    box-shadow: 0 0 80px rgba(0, 255, 255, 0.547); /* Creates a soft circular glow */
+}
+.proDiv{
+    /* Neon Glow Effect */
+    box-shadow: 0 0 80px rgba(191, 0, 255, 0.563); /* Creates a soft circular glow */
+}
+.editionName{
+    color: white;
+    font-family:'OpnSnsHbrw';
+    font-weight: 700;
+    font-size: 2rem;
+}
+.price{
+    font-family: 'Inter';
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+.FabBttn{
+    padding: 10px 125px;
+    margin: 20px 15px;
+    border-radius: 5px;
+    background-color: white;
+    font-family:'OpnSnsHbrw';
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000000;
+    transition:all 0.3s ease;
+}
+.FabBttn:hover{
+    background-color: #A6A6A6;
+}
+.features{
+    margin:50px auto 30px 0;
+    text-align: start;
+    list-style: none;
+}
+.feature{
+    /* margin:20px 0; */
+    font-family: 'OpnSnsHbrw';
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 10px 0;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #7c7c7c;
+    text-underline-offset: 8px;
+}
+.has{
+    color: white;
+}
+.hasNot{
+    color: #777;
+}
+.hintP{
+    color: white;
+    font-size: 0.7rem;
+    font-family: 'OpnSnsHbrw';
+    font-weight: 550;
+}
+.hintA{
+    color: #0071E3;
+    text-decoration: none;
+}
+.feature img{
+    margin: 0 10px 0 -10px;
+}
+
 .tutorialDiv{
     width: 100%;
     max-width: 1300px;
@@ -2064,6 +2224,27 @@ discount PosterPopup^^^^^^^
     word-break: break-all;
 }
 
+
+
+
+
+/*ANFPEcoDocumentation*/
+.versionsUl{
+    margin: 0 auto;
+}
+.EcoHero{
+    margin-top: 150px;
+}
+/* .appNameEco{
+        font-family: 'Orbtrn';
+        color: white;
+        font-size: 2.2rem;
+        
+        padding-top: 4%;
+        text-align: center;
+        white-space: nowrap;
+        margin: 100px 0;
+} */
 @media(max-width: 1280px){
     .HeroColumn{
         margin-top: 15%;

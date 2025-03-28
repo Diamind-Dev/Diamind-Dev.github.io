@@ -9,122 +9,130 @@
     <link rel="stylesheet" href="DocumentationDesign.css"/>
 </head>
 <body class="background">
-<header>
-    <nav>
-        <div class="menuContainerDiv">
-            <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
-            <div class="hamburgerIconDiv">
-                <label for="openMenuInput" id="hamburgerLabel">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </label>    
-            </div>
-            <div class="menuPaneDiv">
-                <ul class="mobileNavigationUl">
-                    <li id="LIHome"><a class="navigationitemA" href="index.html">Home</a></li>
-                    <li id="LIFeatures"><a class="navigationitemA" href="#featuresTitleH2">Features</a></li>
-                    <li id="LICompatibility"><a class="navigationitemA" href="FilteringTutorial.html#SupportedFilesListH2">Suppoeted Files</a></li>
-                    <li id="LITutorial">
-                        <input  type="checkbox" id="mobileDropdownToggle" class="dropdownCheckboxLabel">
-                        <label for="mobileDropdownToggle" class="navigationitemA TutorialsA">Tutorials <img src="assets\BottomArrow.svg" class="bottomArrowImg"/></label>
-                        <div class="mobileListSectionContainerDiv">  
-                            <h2 class="DDMSubTitleH2">Set Up File Picker</h2>
-                                <ul class="ListUl">
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#OpenningFilePickerTutorialId">open file picker</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#retrieveFilepathTutorialId">Retrieve file path</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#CancelingEventTutorialId">cancel event</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#ConfigOptionsTutorialId">config options </a></li>
-                                </ul>
-                        </div>
-                        <div class="mobileListSectionContainerDiv">
-                            <h2 class="DDMSubTitleH2">File Types</h2>
-                                <ul class="ListUl">
+    <header>
+        <nav>
+            <div class="menuContainerDiv">
+                <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
+                <div class="hamburgerIconDiv">
+                    <label for="openMenuInput" id="hamburgerLabel">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </label>    
+                </div>
+                <div class="menuPaneDiv">
+                    <ul class="mobileNavigationUl">
+                        <li id="LIHome"><a class="navigationitemA" href="index.html">Home</a></li>
+                        <li id="LIFeatures"><a class="navigationitemA" href="ANFPEco.html">ANFP Eco</a></li>
+                        <li id="LICompatibility"><a class="navigationitemA" href="#SupportedFilesListH2">Suppoeted Files</a></li>
+                        <li id="LITutorial">
+                            <input  type="checkbox" id="mobileDropdownToggle" class="dropdownCheckboxLabel">
+                            <label for="mobileDropdownToggle" class="navigationitemA TutorialsA">Tutorials(Full Version) <img src="assets\BottomArrow.svg" class="bottomArrowImg"/></label>
+                            <div class="mobileListSectionContainerDiv">  
+                                <h2 class="DDMSubTitleH2">Set Up File Picker</h2>
+                                    <ul class="ListUl">
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#OpenningFilePickerTutorialId">open file picker</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#retrieveFilepathTutorialId">Retrieve file path</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#CancelingEventTutorialId">cancel event</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#ConfigOptionsTutorialId">config options </a></li>
+                                    </ul>
+                            </div>
+                            <div class="mobileListSectionContainerDiv">
+                                <h2 class="DDMSubTitleH2">File Types</h2>
+                                <ul class="ListUl DDMListContainerDiv">
                                     <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#SupportedFilesListH2">supported file types</a></li>
                                     <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
                                     <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
                                 </ul>
+                            </div>
+                            <div class="mobileListSectionContainerDiv">
+                                <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
+                                    <ul class="ListUl">
+                                        <li class="DDMListItemsLi"><a class="DDMItemA DisableDriveA" href="Drive&ExternalAppsTutorial.html#DisableOptionsH1">Disable Drive & external apps</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#DriveEventsH1">Google Drive Events</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#cacheFolderTitleH1">Cache Folder</a></li>
+                                    </ul>
+                            </div>
+                        </li>
+                        <li id="LISupport"><a class="navigationitemA" href="Support.html">Support</a></li>
+                    </ul>    
+                    <!-- <div class="mobileDropdownMenuImgContainerDiv">
+                        <a class="DropdownMenuiconContainerA" href="index.html">
+                            <img id="dropdownMenuDiamindLogo" src="assets\Diamindlogo.svg"  alt="DiamindIcon"/>
+                        </a>
+                        <a `href="index.html">
+                            <img id="dropDownMenuANFPLogo" src="assets\ANFPicon.svg" alt="ANFPIcon"/>
+                        </a> -->
+                    </div>   
+                </div>    
+            <a class="iconContainerA" href="index.html">
+                <img id="DiamindLogo" src="assets\Diamindlogo.svg"  alt="DiamindIcon"/>
+            </a>
+            <a href="index.html">
+                <img id="ANFPLogo" src="assets\ANFPicon.svg" alt="ANFPIcon"/>
+            </a>
+            <ul class="navigationUl">
+                <li id="LIHome"><a class="navigationitemA" href="index.html">Home</a></li>
+                <li id="LIFeatures"><a class="navigationitemA" href="ANFPEco.html">ANFP Eco</a></li>
+                <li id="LITutorial">
+                <input type="checkbox" id="dropdownToggle" class="dropdownCheckboxLabel">
+                <label for="dropdownToggle" class="navigationitemA TutorialsA">Tutorials</label>
+                        <div class="dropDownMenuContainerDiv">
+                            <div class="categoryMenu">
+                                <input class="dropDownMenuTitleH1" type="radio" id="proRadio" name="options" value="Option 1" checked>
+                                <label class="radioBttn" for="proRadio">Pro Version</label>
 
-                        </div>
-                        <div class="mobileListSectionContainerDiv">
-                            <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
-                                <ul class="ListUl">
-                                    <li class="DDMListItemsLi"><a class="DDMItemA DisableDriveA" href="Drive&ExternalAppsTutorial.html#DisableOptionsH1">Disable Drive & external apps</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#DriveEventsH1">Google Drive Events</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#cacheFolderTitleH1">Cache Folder</a></li>
-                                </ul>
+                                <input class="dropDownMenuTitleH1" type="radio" id="ecoRadio" name="options" value="Option 2" >
+                                <label class="radioBttn" for="ecoRadio">Eco Version</label>
+                            </div>
+                            <div class="EcoMenuDiv">
+                                <div class="listSectionContainerDiv">  
+                                    <h2 class="DDMSubTitleH2">Set Up ANFP Eco</h2>
+                                    <div class="DDMListContainerDiv">
+                                        <span class="seperatorLineSpan"></span>
+                                        <ul class="ListUl">
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="EcoTutorial.html#OpenFilePicker">Open File Picker</a></li>
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="EcoTutorial.html#RetrieveFilePath">Retrieve File Path</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ProMenuDiv">
+                                <div class="listSectionContainerDiv">  
+                                    <h2 class="DDMSubTitleH2">Set Up File Picker</h2>
+                                        <ul class="ListUl DDMListContainerDiv">
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#OpenningFilePickerTutorialId">open file picker</a></li>
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#retrieveFilepathTutorialId">Retrieve file path</a></li>
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#CancelingEventTutorialId">cancel event</a></li>
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#ConfigOptionsTutorialId">config options </a></li>
+                                        </ul>
+                                </div>
+                                <div class="listSectionContainerDiv">
+                                    <h2 class="DDMSubTitleH2">File Types</h2>
+                                    <ul class="ListUl DDMListContainerDiv">
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#SupportedFilesListH2">supported file types</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
+                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
+                                    </ul>
+                                </div>
+                                <div class="listSectionContainerDiv">
+                                    <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
+                                        <ul class="ListUl DDMListContainerDiv">
+                                            <li class="DDMListItemsLi"><a class="DDMItemA DisableDriveA" href="Drive&ExternalAppsTutorial.html#DisableOptionsH1">Disable Drive & external apps</a></li>
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#DriveEventsH1">Google Drive Events</a></li>
+                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#cacheFolderTitleH1">Cache Folder</a></li>
+                                        </ul>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li id="LISupport"><a class="navigationitemA" href="Support.html">Support</a></li>
-                </ul>    
-                <!-- <div class="mobileDropdownMenuImgContainerDiv">
-                    <a class="DropdownMenuiconContainerA" href="index.html">
-                        <img id="dropdownMenuDiamindLogo" src="assets\Diamindlogo.svg"  alt="DiamindIcon"/>
-                    </a>
-                    <a `href="index.html">
-                        <img id="dropDownMenuANFPLogo" src="assets\ANFPicon.svg" alt="ANFPIcon"/>
-                    </a> -->
-                </div>   
-            </div>
-        </div>
-        <!-- <a class="menuButtA"  -->
-        <a class="iconContainerA" href="index.html">
-            <img id="DiamindLogo" src="assets\Diamindlogo.svg"  alt="DiamindIcon"/>
-        </a>
-        <a href="index.html">
-            <img id="ANFPLogo" src="assets\ANFPicon.svg" alt="ANFPIcon"/>
-        </a>
-        <ul class="navigationUl">
-            <li id="LIHome"><a class="navigationitemA" href="index.html">Home</a></li>
-            <li id="LIFeatures"><a class="navigationitemA" href="#featuresTitleH2">Features</a></li>
-            <li id="LITutorial">
-            <input type="checkbox" id="dropdownToggle" class="dropdownCheckboxLabel">
-            <label for="dropdownToggle" class="navigationitemA TutorialsA">Tutorials</label>
-                    <div class="dropDownMenuContainerDiv">
-                        <h1 class="dropDownMenuTitleH1">Tutorials</h1>
-                        <div class="listSectionContainerDiv">  
-                            <h2 class="DDMSubTitleH2">Set Up File Picker</h2>
-                            <div class="DDMListContainerDiv">
-                                <span class="seperatorLineSpan"></span>
-                                <ul class="ListUl">
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#OpenningFilePickerTutorialId">open file picker</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#retrieveFilepathTutorialId">Retrieve file path</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#CancelingEventTutorialId">cancel event</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#ConfigOptionsTutorialId">config options </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="listSectionContainerDiv">
-                            <h2 class="DDMSubTitleH2">File Types</h2>
-                            <div class="DDMListContainerDiv">
-                                <span class="seperatorLineSpan"></span>
-                                <ul class="ListUl">
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#SupportedFilesListH2">supported file types</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="listSectionContainerDiv">
-                            <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
-                            <div class="DDMListContainerDiv">
-                                <span class="seperatorLineSpan"></span>
-                                <ul class="ListUl">
-                                    <li class="DDMListItemsLi"><a class="DDMItemA DisableDriveA" href="Drive&ExternalAppsTutorial.html#DisableOptionsH1">Disable Drive & external apps</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#DriveEventsH1">Google Drive Events</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#cacheFolderTitleH1">Cache Folder</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li id="LISupport"><a class="navigationitemA" href="Support.html">Support</a></li>
+                </ul>
             </ul>
-        </ul>
-        <button id="navDownloadButt" onclick="window.location.href='ANFPDemo.html'"> Demo Edition </button>
-    </nav>
-</header>
-<main class="homeMain">
+            <button id="navDownloadButt" onclick="window.location.href='ANFPDemo.html'">Demo Edition</button>
+        </nav>
+    </header>
+    <main class="homeMain">
     <div class="welcomeSectionParent">
         <div class="BackgroundWall"> 
             <!-- <svg class="svgGraph" width="1920" height="608" viewBox="0 0 1920 608" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -329,6 +337,39 @@
             <li class="FeatureLi">Access to Google Drive</li>
             <li class="FeatureLi">Arrangement grid/ list</li>
         </ul>
+    </div>
+    <div class="priceSection">
+        <h1 class="posterTitleH1">ANFP is now available on<br/> the Fab in two editions!</h1>
+        <div class="compareSection">
+            <div class="priceDiv ecoDiv">
+                <h2 class="editionName">Eco</h2>
+                <h1 class="price">$16.99</h1>
+                <a class="FabBttn">Try now</a>
+                <ul class="features">
+                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>file picker basic features </li>
+                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>google drive with blueprint events</li>
+                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>external apps</li>
+                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>file type filtering by category</li>
+                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>filetype filtering by file extensions</li>
+                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>selection methods(multi/single/folder)</li>
+                </ul>
+                <p class="hintP">are you not sure? check out the <a class="hintA" href="ANFPDemo.html">demo</a> or our <a class="hintA" href="https://discord.gg/BAwBMPuHRe">Discord</a></p>
+            </div>
+            <div class="priceDiv proDiv">
+                <h2 class="editionName">Pro</h2>
+                <h1 class="price">$33.99</h1>
+                <a class="FabBttn" href="https://www.fab.com/listings/342e21f6-533d-4571-bbf2-e7ae3ec4d01e">Try now</a>
+                <ul class="features">
+                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>file picker basic features </li>
+                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>google drive with blueprint events</li>
+                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>external apps</li>
+                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>file type filtering by category</li>
+                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>filetype filtering by file extensions</li>
+                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>selection methods(multi/single/folder)</li>
+                </ul>
+                <p class="hintP">are you not sure? check out the <a class="hintA" href='ANFPDemo.html'>demo</a> or our <a class="hintA" href="https://discord.gg/BAwBMPuHRe">Discord</a></p>
+            </div>
+        </div>
     </div>
     <div class="tutorialDiv">
         <h2 class="TitleH2">Tutorial</h2>
