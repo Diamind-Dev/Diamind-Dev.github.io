@@ -175,8 +175,8 @@ footer{
 }
 
 .dFooterUl{
-    align-self: center;
     display: flex;
+    align-self: center;
     list-style: none;
     gap: 20px;
 }
