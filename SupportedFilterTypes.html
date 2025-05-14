@@ -20,6 +20,7 @@
                 <img id="ANFPLogo" src="assets\UpdatedImages\ANFPLogo.svg" alt="ANFPIcon"/>
             </a>
 
+            
            <div class="menuContainerDiv">
                 <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
                 <div class="hamburgerIconDiv">
@@ -39,6 +40,8 @@
                     </ul>    
                 </div>   
             </div>   
+
+
             <ul class="navUl">
                 <li class="navLi"><a class="navLinkA" href="index.html">Home</a></li>
                 <li class="navLi"><a class="navLinkA" href="ANFPEco.html">Eco</a></li>
@@ -49,8 +52,8 @@
             <a class="FabButn" href="https://www.fab.com/sellers/Diamind%20Group">Go FAB</a>
         </nav>
         <nav class="docuPathNav">
-            <button id="roadmap" id="roadmap" class="roadmapBttn"><img src="assets\UpdatedImages\Roadmap.svg" alt="Tutorial roadmap Icon" class="roadmapImg"/></button>
-            <h3 class="docuPath">Tutorials  /  ANFP (full version)  /  filter types ...</h3>
+            <button id="roadmap" class="roadmapBttn"><img src="assets\UpdatedImages\Roadmap.svg" alt="Tutorial roadmap Icon" class="roadmapImg"/></button>
+            <h3 class="docuPath">Tutorials  /  ANFP (full version)  /  Set up filter type ...</h3>
         </nav>
     </header>
 
@@ -102,33 +105,33 @@
         </div>
     </div>
 
-    <main>
-        <h1 class="pageTitle">Filtering File Types & Supported Files</h1>
-            
-        <p class="articleP">In this tutorial, you'll learn how to configure a filter for supported files. You can set this filter based on
-        <a class="linkA" href="#categoryBaseH2"> general file type categories </a>or<a class="linkA" href="#detailedBaseH2"> specify detailed file extensions.</a>The following lists collect the supported file types, which you can customize using UE Blueprints.</p>
+    <main class="DocuMain">
+        <h1 class="pageTitle">Supported Filters</h1>
+     
+            <p class="articleP documentationP">ANFP supports all file types by default, and the Full version gives you powerful control over what users can pick. You can apply filters based on general file type categories (like images, videos, audio, etc.) or define specific file extensions to precisely target the formats you want.</p>
+            <p class="articleP documentationP">this page shows you all the available file types that you can filter. Once you apply a file type as a filter, all other files become inaccessible.</p>
 
-        <img src="assets\filterTutorialPoster.svg" class="pics" alt="FileTypesPoster"/>
+                <h2 class="sub-titles">Video:<p class="articleP">mp4, mov, mkv, m4v, avi, wmv, flv, f4v, webm, avchd, amv, ogv</p></h2>
+                <img src="assets/FilterTypes/ExtensionVideo.png" alt="Video Type Extensions" class="pics"/>
       
-        <h1 class="sub-titles">Setting Filter</h1>
-          
-        <h2 class="sub-titles" >General Category Base</h2>
-        <img src="assets\UpdatedImages\FilteringCategoryBase.png" class="pics" alt="FilteringBasedOnCategory"/>
-        <p class="articleP categoryFilteringP">Once you declare the supported file types, undeclared file types will be disabled.</p>
-        <img src="assets\UpdatedImages\SetupFilePickerAccordingToResultImage.png" class="pics" alt="FilteringBasedOnCategoryWithBlueprints"/>
-        <img src="assets\FilterResult.jpg" class="verPics" alt="ImageOfTheResultOfFilteringFilesInANFP"/>
-           
-        <h2 class="sub-titles" id="detailedFiltering">Specify Detailed Base</h2>
-        <img src="assets\UpdatedImages\SetUpFilePickerInDetail.png" class="pics" alt="SetUpInDetailFilterForMusicCategory"/>
-        <!-- <img src="assets\filterInDetailImage.png" class="FilterInDetailImageImg" alt="SetUpInDetailFilterForImageCategory"/> -->
-        <p class="articleP" >When you apply filters using both general categories and detailed file extensions of the same category, 
-            the detailed file extension filters do not impact on the files.</p>
-        <img src="assets\UpdatedImages\LimitOfSettingBothTypeOfFiltering.png" class="pics" alt="FilteringNote_InterfereBetweenCategoryTypeAndDetailedType"/>
-        <p class="articleP">You can open the file pikcer without setting any filter 
-            though BUT notice that if the file picker is
-            opened _without a filter set_ 
-            the file picker will include all existing file types, which may lead to some unexpected behavior later on.</p>
-        <img src="assets\UpdatedImages\OnlyOpenFilePickerWithoutFilter.png" class="pics" alt="Opening File Picker Without Filter"/>
+                <h2 class="sub-titles">Text:<p class="articleP">txt, html, css, C++, C, py, java, yml, scss, csv, less, jsx, tsx, asp, aspx, jsp, cgi, rb, cs, vb, swift, scala, groovi, go, rust, rs, lua, assm, s, bat, ps1, sh, cmd, ada, hpp, h, inc, mk, cmake </p></h2>
+                <img src="assets/FilterTypes/ExtensionText.png" alt="Text Type Extensions" class="pics"/>
+   
+                <h2 class="sub-titles">Image:<p class="articleP"> png, jpeg, gif, tiff, svg, webp, bmp, exr</p></h2>
+                <img src="assets/FilterTypes/ExtensionImage.png" alt="Image Type Extensions" class="pics"/>
+
+                <h2 class="sub-titles">Audio:<p class="articleP"> mp3, wav, tta, opus, ogg, aac, alac, flac </p></h2>
+                <img src="assets/FilterTypes/ExtensionAudio.png" alt="Audio Type Extensions" class="pics"/>
+
+                <h2 class="sub-titles">Application:<p class="articleP"> pdf, zip, doc, docx, odt, xls, xlsx, tar, mword, excel, mpoint, epub, comp, binary</p></h2>
+                <img src="assets/FilterTypes/ExtensionApp.png" alt="Application Type Extensions" class="pics"/>
+
+                <h2 class="sub-titles">Font:<p class="articleP"> ttf, otf, fnt, woff, eof, svg </p></h2>
+                <img src="assets/FilterTypes/ExtensionFont.png" alt="Font Type Extensions" class="pics"/>
+
+                <h2 class="sub-titles">3d Model:<p class="articleP">fbx, stl, x3d</p></h2>
+                <img src="assets/FilterTypes/ExtensionModels.png" alt="Models Type Extensions" class="pics"/>
+         
     </main>
     <footer class="docuFooter">
         <ul class="dFooterUl">
@@ -140,6 +143,6 @@
             <li ><a class="dFooterA" href="index.html">Blogs</a></li>
         </ul>
     </footer>
-     <script src="logics.js"></script>
+    <script src="logics.js"></script>
 </body>
 </html>

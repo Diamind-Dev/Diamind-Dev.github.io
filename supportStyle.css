@@ -1,0 +1,56 @@
+.SupportPosterImg{
+    margin-top: 80px;
+    position: relative;
+}
+.supportPoseterDiv{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 1920px;
+    max-height: 532px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.discordButtA{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding: 0.7% 2.5%;
+    color: white;
+    font-family: 'OpnSnsHbrw';
+    font-size: 1.8rem ;
+    background-color: #340eca;
+    border-radius: 50px;
+    justify-self: flex-end;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    text-decoration: none;
+    /* margin: auto auto 2% auto;*/
+}
+.discordButtA:hover{
+    background-color: #5430E7;
+}
+.discordIconImg{
+    margin-right: 3%;
+}
+
+.posterTitleH1{
+    color: white;
+    font-family: 'OpnSnsHbrw';
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    white-space: nowrap;
+    /* margin-bottom: 2%; */
+    margin-top: 200px; 
+    /* margin: 10% auto; */
+}
+
+footer{
+    margin-top: 0;
+}

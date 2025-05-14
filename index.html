@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">>
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
     <title>ANFPDocumentation</title>
-    <link rel="stylesheet" href="DocumentationDesign.css"/>
+    <link rel="stylesheet" href="layoutStyle.css"/>
+    <link rel="stylesheet" href="Style.css">
+
 </head>
 <body class="background">
     <header>
-        <nav>
-            <div class="menuContainerDiv">
+        <nav class="MainNav">
+
+
+
+
+
+            <a class="navBttn" href="index.html">
+                <img id="DiamindLogo" src="assets\UpdatedImages\DiamindNewLogo.svg"  alt="DiamindIcon"/>
+            </a>
+            <a class="navBttn" href="index.html">
+                <img id="ANFPLogo" src="assets\UpdatedImages\ANFPLogo.svg" alt="ANFPIcon"/>
+            </a>
+
+           <div class="menuContainerDiv">
                 <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
                 <div class="hamburgerIconDiv">
                     <label for="openMenuInput" id="hamburgerLabel">
@@ -22,219 +36,38 @@
                 </div>
                 <div class="menuPaneDiv">
                     <ul class="mobileNavigationUl">
-                        <li id="LIHome"><a class="navigationitemA" href="index.html">Home</a></li>
-                        <li id="LIFeatures"><a class="navigationitemA" href="ANFPEco.html">ANFP Eco</a></li>
-                        <li id="LICompatibility"><a class="navigationitemA" href="#SupportedFilesListH2">Suppoeted Files</a></li>
-                        <li id="LITutorial">
-                            <input  type="checkbox" id="mobileDropdownToggle" class="dropdownCheckboxLabel">
-                            <label for="mobileDropdownToggle" class="navigationitemA TutorialsA">Tutorials(Full Version) <img src="assets\BottomArrow.svg" class="bottomArrowImg"/></label>
-                            <div class="mobileListSectionContainerDiv">  
-                                <h2 class="DDMSubTitleH2">Set Up File Picker</h2>
-                                    <ul class="ListUl">
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#OpenningFilePickerTutorialId">open file picker</a></li>
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#retrieveFilepathTutorialId">Retrieve file path</a></li>
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#CancelingEventTutorialId">cancel event</a></li>
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#ConfigOptionsTutorialId">config options </a></li>
-                                    </ul>
-                            </div>
-                            <div class="mobileListSectionContainerDiv">
-                                <h2 class="DDMSubTitleH2">File Types</h2>
-                                <ul class="ListUl DDMListContainerDiv">
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#SupportedFilesListH2">supported file types</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
-                                    <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
-                                </ul>
-                            </div>
-                            <div class="mobileListSectionContainerDiv">
-                                <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
-                                    <ul class="ListUl">
-                                        <li class="DDMListItemsLi"><a class="DDMItemA DisableDriveA" href="Drive&ExternalAppsTutorial.html#DisableOptionsH1">Disable Drive & external apps</a></li>
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#DriveEventsH1">Google Drive Events</a></li>
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#cacheFolderTitleH1">Cache Folder</a></li>
-                                    </ul>
-                            </div>
-                        </li>
-                        <li id="LISupport"><a class="navigationitemA" href="Support.html">Support</a></li>
+                        <li class="navLi"><a class="navLinkA" href="index.html">Home</a></li>
+                        <li class="navLi"><a class="navLinkA" href="ANFPEco.html">Eco</a></li>
+                        <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Products</a></li>
+                        <li class="navLi"><a class="navLinkA" href="ANFPDemo.html">Demo</a></li>
+                        <li class="navLi"><a class="navLinkA" href="Tutorials.html">Tutorials</a></li>
                     </ul>    
-                    <!-- <div class="mobileDropdownMenuImgContainerDiv">
-                        <a class="DropdownMenuiconContainerA" href="index.html">
-                            <img id="dropdownMenuDiamindLogo" src="assets\Diamindlogo.svg"  alt="DiamindIcon"/>
-                        </a>
-                        <a `href="index.html">
-                            <img id="dropDownMenuANFPLogo" src="assets\ANFPicon.svg" alt="ANFPIcon"/>
-                        </a> -->
-                    </div>   
-                </div>    
-            <a class="iconContainerA" href="index.html">
-                <img id="DiamindLogo" src="assets\Diamindlogo.svg"  alt="DiamindIcon"/>
-            </a>
-            <a href="index.html">
-                <img id="ANFPLogo" src="assets\ANFPicon.svg" alt="ANFPIcon"/>
-            </a>
-            <ul class="navigationUl">
-                <li id="LIHome"><a class="navigationitemA" href="index.html">Home</a></li>
-                <li id="LIFeatures"><a class="navigationitemA" href="ANFPEco.html">ANFP Eco</a></li>
-                <li id="LITutorial">
-                <input type="checkbox" id="dropdownToggle" class="dropdownCheckboxLabel">
-                <label for="dropdownToggle" class="navigationitemA TutorialsA">Tutorials</label>
-                        <div class="dropDownMenuContainerDiv">
-                            <div class="categoryMenu">
-                                <input class="dropDownMenuTitleH1" type="radio" id="proRadio" name="options" value="Option 1" checked>
-                                <label class="radioBttn" for="proRadio">Pro Version</label>
+                </div>   
+            </div>   
 
-                                <input class="dropDownMenuTitleH1" type="radio" id="ecoRadio" name="options" value="Option 2" >
-                                <label class="radioBttn" for="ecoRadio">Eco Version</label>
-                            </div>
-                            <div class="EcoMenuDiv">
-                                <div class="listSectionContainerDiv">  
-                                    <h2 class="DDMSubTitleH2">Set Up ANFP Eco</h2>
-                                    <div class="DDMListContainerDiv">
-                                        <span class="seperatorLineSpan"></span>
-                                        <ul class="ListUl">
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="EcoTutorial.html#OpenFilePicker">Open File Picker</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="EcoTutorial.html#RetrieveFilePath">Retrieve File Path</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ProMenuDiv">
-                                <div class="listSectionContainerDiv">  
-                                    <h2 class="DDMSubTitleH2">Set Up File Picker</h2>
-                                        <ul class="ListUl DDMListContainerDiv">
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#OpenningFilePickerTutorialId">open file picker</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#retrieveFilepathTutorialId">Retrieve file path</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#CancelingEventTutorialId">cancel event</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="SetUpANFPTutorial.html#ConfigOptionsTutorialId">config options </a></li>
-                                        </ul>
-                                </div>
-                                <div class="listSectionContainerDiv">
-                                    <h2 class="DDMSubTitleH2">File Types</h2>
-                                    <ul class="ListUl DDMListContainerDiv">
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#SupportedFilesListH2">supported file types</a></li>
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#categoryBaseH2">set general base filter</a></li>
-                                        <li class="DDMListItemsLi"><a class="DDMItemA" href="FilteringTutorial.html#detailedBaseH2">set detail base filter</a></li>
-                                    </ul>
-                                </div>
-                                <div class="listSectionContainerDiv">
-                                    <h2 class="DDMSubTitleH2">Drive & External Apps</h2>
-                                        <ul class="ListUl DDMListContainerDiv">
-                                            <li class="DDMListItemsLi"><a class="DDMItemA DisableDriveA" href="Drive&ExternalAppsTutorial.html#DisableOptionsH1">Disable Drive & external apps</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#DriveEventsH1">Google Drive Events</a></li>
-                                            <li class="DDMListItemsLi"><a class="DDMItemA" href="Drive&ExternalAppsTutorial.html#cacheFolderTitleH1">Cache Folder</a></li>
-                                        </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="LISupport"><a class="navigationitemA" href="Support.html">Support</a></li>
-                </ul>
+
+            <ul class="navUl">
+                <li class="navLi"><a class="navLinkA" href="index.html">Home</a></li>
+                <li class="navLi"><a class="navLinkA" href="ANFPEco.html">Eco</a></li>
+                <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Products</a></li>
+                <li class="navLi"><a class="navLinkA" href="ANFPDemo.html">Demo</a></li>
+                <li class="navLi"><a class="navLinkA" href="Tutorials.html">Tutorials</a></li>
             </ul>
-            <button id="navDownloadButt" onclick="window.location.href='ANFPDemo.html'">Demo Edition</button>
+            <a class="FabButn" href="https://www.fab.com/sellers/Diamind%20Group">Go FAB</a>
         </nav>
     </header>
-    <main class="homeMain">
-    <div class="welcomeSectionParent">
-        <div class="BackgroundWall"> 
-            <!-- <svg class="svgGraph" width="1920" height="608" viewBox="0 0 1920 608" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="Graph" id="brightenPink" d="M42.2956 348.873C42.2956 356.237 48.2651 362.206 55.6289 362.206C62.9927 362.206 68.9622 356.237 68.9622 348.873C68.9622 341.509 62.9927 335.54 55.6289 335.54C48.2651 335.54 42.2956 341.509 42.2956 348.873ZM1938.34 929.268C1938.34 936.632 1944.31 942.602 1951.67 942.602C1959.04 942.602 1965.01 936.632 1965.01 929.268C1965.01 921.904 1959.04 915.935 1951.67 915.935C1944.31 915.935 1938.34 921.904 1938.34 929.268ZM55.6289 351.373C519.654 351.373 760.051 496.184 1001.2 641.213C1242.58 786.383 1484.72 931.768 1951.67 931.768V926.768C1486.1 926.768 1244.92 781.955 1003.78 636.928C762.396 491.76 521.038 346.373 55.6289 346.373V351.373Z" fill="#BD3795"/>                
-            </svg>
-            <svg class="svgGraph" width="1920" height="500" viewBox="0 0 1920 500" fill="none" xmlns="http://www.w3.org/2000/svg">    
-                <path class="Graph" id="brightenBlue" d="M42.2956 915.424C42.2956 922.788 48.2651 928.758 55.6289 928.758C62.9927 928.758 68.9622 922.788 68.9622 915.424C68.9622 908.06 62.9927 902.091 55.6289 902.091C48.2651 902.091 42.2956 908.06 42.2956 915.424ZM1935.49 442.562C1935.49 449.925 1941.46 455.895 1948.83 455.895C1956.19 455.895 1962.16 449.925 1962.16 442.562C1962.16 435.198 1956.19 429.228 1948.83 429.228C1941.46 429.228 1935.49 435.198 1935.49 442.562ZM55.5937 917.924C582.451 925.342 905.722 899.5 1108.91 856.502C1312.15 813.493 1395.59 753.25 1442.36 691.63C1465.66 660.938 1479.8 629.944 1495.05 601.172C1510.34 572.337 1526.81 545.557 1554.85 522.551C1610.99 476.504 1714.16 445.062 1948.83 445.062V440.062C1714.07 440.062 1609.29 471.435 1551.68 518.686C1522.86 542.329 1506.02 569.818 1490.64 598.83C1475.22 627.905 1461.35 658.337 1438.38 688.607C1392.6 748.912 1310.47 808.738 1107.88 851.61C905.239 894.492 582.412 920.341 55.6641 912.925L55.5937 917.924Z" fill="#5DB7D0"/>
-            </svg>
-            <svg class="svgGraph" width="1920" height="103" viewBox="0 0 1920 103" fill="none" xmlns="http://www.w3.org/2000/svg">        
-                <path class="Graph" id="darkPurple" d="M1935.49 205.869C1935.49 213.233 1941.46 219.202 1948.83 219.202C1956.19 219.202 1962.16 213.233 1962.16 205.869C1962.16 198.505 1956.19 192.536 1948.83 192.536C1941.46 192.536 1935.49 198.505 1935.49 205.869ZM42.1549 205.869C42.1549 213.233 48.1245 219.203 55.4883 219.203C62.8521 219.203 68.8216 213.233 68.8216 205.869C68.8216 198.505 62.8521 192.536 55.4883 192.536C48.1245 192.536 42.1549 198.505 42.1549 205.869ZM1947.59 203.7C1922.39 218.127 1876.6 230.82 1815.07 241.68C1753.65 252.522 1676.85 261.489 1589.88 268.605C1415.94 282.838 1201.45 289.66 988.103 289.32C774.755 288.98 562.605 281.479 393.354 267.077C308.725 259.875 234.864 250.951 176.961 240.345C148.008 235.041 123.083 229.324 102.816 223.203C82.5098 217.07 67.0357 210.579 56.8772 203.791L54.0993 207.948C64.8706 215.145 80.9007 221.807 101.37 227.989C121.877 234.182 146.999 239.939 176.06 245.263C234.184 255.91 308.221 264.85 392.93 272.059C562.358 286.477 774.654 293.98 988.095 294.32C1201.54 294.66 1416.17 287.836 1590.29 273.589C1677.34 266.465 1754.3 257.483 1815.94 246.604C1877.47 235.743 1924.04 222.941 1950.07 208.039L1947.59 203.7Z" fill="#541585"/>
-            </svg>
-            <svg class="svgGraph" width="1920" height="103" viewBox="0 0 1920 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="Graph" id="brightenPurple"  d="M1935.49 262.91C1935.49 270.273 1941.46 276.243 1948.83 276.243C1956.19 276.243 1962.16 270.273 1962.16 262.91C1962.16 255.546 1956.19 249.576 1948.83 249.576C1941.46 249.576 1935.49 255.546 1935.49 262.91ZM42.1549 262.91C42.1549 270.274 48.1245 276.243 55.4883 276.243C62.8521 276.243 68.8216 270.274 68.8216 262.91C68.8216 255.546 62.8521 249.576 55.4883 249.576C48.1245 249.576 42.1549 255.546 42.1549 262.91ZM1947.59 260.74C1922.39 275.167 1876.6 287.86 1815.07 298.72C1753.65 309.562 1676.85 318.529 1589.88 325.646C1415.94 339.879 1201.45 346.7 988.103 346.361C774.755 346.021 562.605 338.52 393.354 324.117C308.725 316.916 234.864 307.992 176.961 297.385C148.008 292.082 123.083 286.364 102.816 280.243C82.5098 274.111 67.0357 267.619 56.8772 260.831L54.0993 264.988C64.8706 272.186 80.9007 278.848 101.37 285.03C121.877 291.223 146.999 296.98 176.06 302.303C234.184 312.951 308.221 321.891 392.93 329.099C562.358 343.517 774.654 351.021 988.095 351.361C1201.54 351.701 1416.17 344.877 1590.29 330.629C1677.34 323.506 1754.3 314.524 1815.94 303.644C1877.47 292.783 1924.04 279.982 1950.07 265.079L1947.59 260.74Z" fill="#8100E3"/>
-            </svg>
-            <svg width="523" height="130" viewBox="0 0 523 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="Graph" id="brightenRed" d="M42.0651 149.602C42.0651 156.966 48.0346 162.935 55.3984 162.935C62.7622 162.935 68.7318 156.966 68.7318 149.602C68.7318 142.238 62.7622 136.269 55.3984 136.269C48.0346 136.269 42.0651 142.238 42.0651 149.602ZM55.0128 152.072C195.719 174.042 319.728 178.564 410.097 161.788C500.281 145.046 558.169 106.785 564.033 42.2261L559.053 41.7739C553.517 102.72 498.926 140.212 409.184 156.872C319.627 173.497 196.264 169.067 55.7841 147.132L55.0128 152.072Z" fill="#C5186E"/>
-            </svg> -->
-            <svg width="2030" height="1083" viewBox="0 0 2030 1083" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="Welcome Screen" clip-path="url(#clip0_1018_395)" filter="url(#filter0_d_1018_395)">
-                <rect width="1920" height="973" transform="translate(42 42)" fill="none"/>
-                <path id="brightenPink" d="M42.2956 348.873C42.2956 356.237 48.2651 362.206 55.6289 362.206C62.9927 362.206 68.9622 356.237 68.9622 348.873C68.9622 341.509 62.9927 335.54 55.6289 335.54C48.2651 335.54 42.2956 341.509 42.2956 348.873ZM1938.34 929.268C1938.34 936.632 1944.31 942.602 1951.67 942.602C1959.04 942.602 1965.01 936.632 1965.01 929.268C1965.01 921.904 1959.04 915.935 1951.67 915.935C1944.31 915.935 1938.34 921.904 1938.34 929.268ZM55.6289 351.373C519.654 351.373 760.051 496.184 1001.2 641.213C1242.58 786.383 1484.72 931.768 1951.67 931.768V926.768C1486.1 926.768 1244.92 781.955 1003.78 636.928C762.396 491.76 521.038 346.373 55.6289 346.373V351.373Z" fill="#BD3795"/>
-                <path id="brightenBlue" d="M42.2956 915.424C42.2956 922.788 48.2651 928.758 55.6289 928.758C62.9927 928.758 68.9622 922.788 68.9622 915.424C68.9622 908.06 62.9927 902.091 55.6289 902.091C48.2651 902.091 42.2956 908.06 42.2956 915.424ZM1935.49 442.562C1935.49 449.925 1941.46 455.895 1948.83 455.895C1956.19 455.895 1962.16 449.925 1962.16 442.562C1962.16 435.198 1956.19 429.228 1948.83 429.228C1941.46 429.228 1935.49 435.198 1935.49 442.562ZM55.5937 917.924C582.451 925.342 905.722 899.5 1108.91 856.502C1312.15 813.493 1395.59 753.25 1442.36 691.63C1465.66 660.938 1479.8 629.944 1495.05 601.172C1510.34 572.337 1526.81 545.557 1554.85 522.551C1610.99 476.504 1714.16 445.062 1948.83 445.062V440.062C1714.07 440.062 1609.29 471.435 1551.68 518.686C1522.86 542.329 1506.02 569.818 1490.64 598.83C1475.22 627.905 1461.35 658.337 1438.38 688.607C1392.6 748.912 1310.47 808.738 1107.88 851.61C905.239 894.492 582.412 920.341 55.6641 912.925L55.5937 917.924Z" fill="#5DB7D0"/>
-                <path id="darkPurple" d="M1935.49 205.869C1935.49 213.233 1941.46 219.202 1948.83 219.202C1956.19 219.202 1962.16 213.233 1962.16 205.869C1962.16 198.505 1956.19 192.536 1948.83 192.536C1941.46 192.536 1935.49 198.505 1935.49 205.869ZM42.1549 205.869C42.1549 213.233 48.1245 219.203 55.4883 219.203C62.8521 219.203 68.8216 213.233 68.8216 205.869C68.8216 198.505 62.8521 192.536 55.4883 192.536C48.1245 192.536 42.1549 198.505 42.1549 205.869ZM1947.59 203.7C1922.39 218.127 1876.6 230.82 1815.07 241.68C1753.65 252.522 1676.85 261.489 1589.88 268.605C1415.94 282.838 1201.45 289.66 988.103 289.32C774.755 288.98 562.605 281.479 393.354 267.077C308.725 259.875 234.864 250.951 176.961 240.345C148.008 235.041 123.083 229.324 102.816 223.203C82.5098 217.07 67.0357 210.579 56.8772 203.791L54.0993 207.948C64.8706 215.145 80.9007 221.807 101.37 227.989C121.877 234.182 146.999 239.939 176.06 245.263C234.184 255.91 308.221 264.85 392.93 272.059C562.358 286.477 774.654 293.98 988.095 294.32C1201.54 294.66 1416.17 287.836 1590.29 273.589C1677.34 266.465 1754.3 257.483 1815.94 246.604C1877.47 235.743 1924.04 222.941 1950.07 208.039L1947.59 203.7Z" fill="#541585"/>
-                <path id="brightenPurple" d="M1935.49 262.91C1935.49 270.273 1941.46 276.243 1948.83 276.243C1956.19 276.243 1962.16 270.273 1962.16 262.91C1962.16 255.546 1956.19 249.576 1948.83 249.576C1941.46 249.576 1935.49 255.546 1935.49 262.91ZM42.1549 262.91C42.1549 270.274 48.1245 276.243 55.4883 276.243C62.8521 276.243 68.8216 270.274 68.8216 262.91C68.8216 255.546 62.8521 249.576 55.4883 249.576C48.1245 249.576 42.1549 255.546 42.1549 262.91ZM1947.59 260.74C1922.39 275.167 1876.6 287.86 1815.07 298.72C1753.65 309.562 1676.85 318.529 1589.88 325.646C1415.94 339.879 1201.45 346.7 988.103 346.361C774.755 346.021 562.605 338.52 393.354 324.117C308.725 316.916 234.864 307.992 176.961 297.385C148.008 292.082 123.083 286.364 102.816 280.243C82.5098 274.111 67.0357 267.619 56.8772 260.831L54.0993 264.988C64.8706 272.186 80.9007 278.848 101.37 285.03C121.877 291.223 146.999 296.98 176.06 302.303C234.184 312.951 308.221 321.891 392.93 329.099C562.358 343.517 774.654 351.021 988.095 351.361C1201.54 351.701 1416.17 344.877 1590.29 330.629C1677.34 323.506 1754.3 314.524 1815.94 303.644C1877.47 292.783 1924.04 279.982 1950.07 265.079L1947.59 260.74Z" fill="#8100E3"/>
-                <path id="brightenRed" d="M42.0651 149.602C42.0651 156.966 48.0346 162.935 55.3984 162.935C62.7622 162.935 68.7318 156.966 68.7318 149.602C68.7318 142.238 62.7622 136.269 55.3984 136.269C48.0346 136.269 42.0651 142.238 42.0651 149.602ZM55.0128 152.072C195.719 174.042 319.728 178.564 410.097 161.788C500.281 145.046 558.169 106.785 564.033 42.2261L559.053 41.7739C553.517 102.72 498.926 140.212 409.184 156.872C319.627 173.497 196.264 169.067 55.7841 147.132L55.0128 152.072Z" fill="#C5186E"/>
-                </g>
-                <!-- <defs>
-                <filter id="filter0_d_1018_395" x="0.491548" y="0.491548" width="2029.23" height="1082.23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dx="13.1079" dy="13.1079"/>
-                <feGaussianBlur stdDeviation="27.3082"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1018_395"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1018_395" result="shape"/>
-                </filter>
-                <clipPath id="clip0_1018_395">
-                <rect width="1920" height="973" fill="white" transform="translate(42 42)"/>
-                </clipPath>
-                </defs> -->
-                </svg>      
-        </div>
-        <div class="welcomeContentSeparator">
-            <div class="HeroColumn">
-                <div class="icons">
-                    <img class="ANFPSign" src="assets\ANFPBigIcon.svg" alt="ANFPIcon"/>
-                    <img class="UnrealIcon" src="assets\UnrealIcon.svg" alt="UnrealIcon/">
-                </div>
-                <h1 class="appName">Android Native File Picker
-                </h1>
-                 <h2 class="appIntroduction">
-                    Choose files as simple as possible through your<br>
-                    Unreal Engine Android game!<br> <br> <br>
-                    With a simple Blueprint Instruction
-                   </h2>
-                <a class="WlComScrnDnldButt" href="https://www.fab.com/listings/342e21f6-533d-4571-bbf2-e7ae3ec4d01e">
-                   Try ANFP Now !
-                </a>
-            </div>   
-            <div class="welcomeSection">
-                <div class="imageContainerMobile">
-                    <img class="searchPreview" src="assets\searchPreview.png" alt="searchFeaturePreview">        
-                    <img class="filePickerPreview"src="assets\filePickerPreview.png" alt="FilePickerPreview">  
-                </div>
-                <img class="blueprintImg" src="assets\BlueprintImg.png" alt="blueprintPreview"> 
-            </div>
-                        <div class="sliderDiv">
-                            <!-- Slideshow container -->
-                            <div class="slideshow-container">
+        
+    <div class="Hero">
+        <img src="assets\ANFP_Eco\ANFP Eco PosterBG.svg" class="layer posterBG" />
+        <div class="layer BGBlur"></div>
+        <img src="assets\UpdatedImages\OverlayPoster(full).svg" class="layer posterOverlay" alt="ANFP-Eco Poster"/>
+    </div>
 
-                            <!-- Full-width images with number and caption text -->
-                            <div class="mySlides fade">
-                            <img class="slideFilePickerPreview" src="assets\FilePickerPreview.svg" alt="FilePickerPreview" style="width:100%;">
-                            </div>
-                        
-                            <div class="mySlides fade">
-                            <img class="slideCategoryPreview" src="assets\CategoryPreview.svg" alt="CategoryFeaturePreview" style="width:100%;">
-                        </div>
-            
-                            <div class="mySlides fade">
-                            <img class="searchPreview" src="assets\SearchPreview.svg" alt="FilePickerPreview" style="width:100%;">
-                            </div>
-            
-                            <!-- Next and previous buttons -->
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                        </div>
-                        <br>
-                        <!-- The dots/circles -->
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                        </div>
-                    </div> 
-        </div>
-    </div> 
-<!-- discount section -->
-    <div class="introductionDiv">
-        <h2 class="TitleH2" id="ANFPIntroductiontitleH22">What Is ANFP?</h2>
-        <article class="introductionANFPArticl">
+    <main>
+
+       
+        <h2 class="sub-titles" id="ANFPIntroductiontitleH22">What Is ANFP?</h2>
+      
             <p class="articleP">When developing an Android game in Unreal Engine, dealing with importer plugins for music, images, 3D objects, 
                 and more can be frustrating. Manually entering file paths, navigating long directories, ensuring no letter is missed, 
                 and dealing with all those challenges are time-consuming, error-prone, 
@@ -242,7 +75,7 @@
                 The ANFP seamlessly integrates Android’s native file picker into Unreal Engine, 
                 allowing users to browse and select files directly—no manual path entry, no workarounds, just a smooth experience!<br/><br/><br/><br/>
             </p>
-            <h2 class="TitleH2" id="ANFPIntroductiontitleH22">Before getting Started!</h2>
+            <h2 class="sub-titles" id="ANFPIntroductiontitleH22">Before getting Started!</h2>
             <p class="articleP">ANFP covers a wide range of file types. 
                 it almost supports all categories of files and 
                 even lets developers modify compatible files through a very simple blueprint approach
@@ -255,8 +88,7 @@
                 it only supports android ARM64 devices
                 and now is available for UE 5.4 and 5.5 on marketplace. 
             </p>
-        </article>
-    </div>
+
     
     <div class="gifSection">
         <div class="gifWrapper IGif">
@@ -295,24 +127,9 @@
             </div>
         </div>
     </div>
-    <!-- <div class="installInstructionDiv">
-        <div class="overlayElementContainerDiv">
-            <article id="instlInstrcnArticle"> 
-                <h2 class="TitleH2" id="installInstructionTitleH2">
-                    How To Install
-                </h2>
-                <P class="articleP" id="installInstructionP">ANFP is now available on the FAB Marketplace and 
-                    will be automatically installed in your project once the download is complete.
-                </P>
-            </article>
-            <a class="instlInstrcnDwnldButt" href="">
-                Download
-            </a>
-        </div>
-    </div> -->
-    
-    <div class="featuresDiv">
-        <h2 class="TitleH2" id="featuresTitleH2">
+
+   
+        <h2 class="sub-titles" id="featuresTitleH2">
             Features
         </h2>
         <P class="articleP">
@@ -320,117 +137,35 @@
             here’s a list to reassure you. It works exactly as you’d expect, But the real value lies in the plugin itself. In the <a class="linkA" href="SetUpANFPTutorial.html">tutorial</a>, 
             you’ll see how it lets you modify all these features effortlessly using a very handy blueprint workflow.<br/><br/><br/><br/>
         </P>
-         <ul class="featuresUl">
-            <li class="FeatureLi">File type filtering</li>
-            <li class="FeatureLi">Multi file selection</li>
-            <li class="FeatureLi">Select all</li>
-            <li class="FeatureLi">Search</li>
-            <li class="FeatureLi">Recent files</li>
-            <li class="FeatureLi">Thumbnail for images</li>
-            <li class="FeatureLi">Supports different storage location local/ sd card/ cloud</li>
-            <li class="FeatureLi">Category</li>
-            <li class="FeatureLi">Sort files by name/ type/ size/ time</li>
-            <li class="FeatureLi">Hide/Show hidden files</li>
-            <li class="FeatureLi">Preview</li>
-            <li class="FeatureLi">Share files</li>
-            <li class="FeatureLi">Information file type/ date/ size</li>
-            <li class="FeatureLi">Access to Google Drive</li>
-            <li class="FeatureLi">Arrangement grid/ list</li>
+         <ul class="featureList">
+            <li>File type filtering</li>
+            <li>Multi file selection</li>
+            <li>Select all</li>
+            <li>Search</li>
+            <li>Recent files</li>
+            <li>Thumbnail for images</li>
+            <li>Supports different storage location local/ sd card/ cloud</li>
+            <li>Category</li>
+            <li>Sort files by name/ type/ size/ time</li>
+            <li>Hide/Show hidden files</li>
+            <li>Preview</li>
+            <li>Share files</li>
+            <li>Information file type/ date/ size</li>
+            <li>Access to Google Drive</li>
+            <li>Arrangement grid/ list</li>
         </ul>
-    </div>
-    <!-- <div class="priceSection">
-        <h1 class="posterTitleH1">ANFP is now available on<br/> the Fab in two editions!</h1>
-        <div class="compareSection">
-            <div class="priceDiv ecoDiv">
-                <h2 class="editionName">Eco</h2>
-                <h1 class="price">$16.99</h1>
-                <a class="FabBttn">Try now</a>
-                <ul class="features">
-                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>file picker basic features </li>
-                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>google drive with blueprint events</li>
-                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>external apps</li>
-                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>file type filtering by category</li>
-                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>filetype filtering by file extensions</li>
-                    <li class="feature hasNot"><img src="assets\UpdatedImages\Uncheck.png" alt=""/>selection methods(multi/single/folder)</li>
-                </ul>
-                <p class="hintP">are you not sure? check out the <a class="hintA" href="ANFPDemo.html">demo</a> or our <a class="hintA" href="https://discord.gg/BAwBMPuHRe">Discord</a></p>
-            </div>
-            <div class="priceDiv proDiv">
-                <h2 class="editionName">Pro</h2>
-                <h1 class="price">$33.99</h1>
-                <a class="FabBttn" href="https://www.fab.com/listings/342e21f6-533d-4571-bbf2-e7ae3ec4d01e">Try now</a>
-                <ul class="features">
-                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>file picker basic features </li>
-                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>google drive with blueprint events</li>
-                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>external apps</li>
-                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>file type filtering by category</li>
-                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>filetype filtering by file extensions</li>
-                    <li class="feature has"><img src="assets\UpdatedImages\check.png" alt=""/>selection methods(multi/single/folder)</li>
-                </ul>
-                <p class="hintP">are you not sure? check out the <a class="hintA" href='ANFPDemo.html'>demo</a> or our <a class="hintA" href="https://discord.gg/BAwBMPuHRe">Discord</a></p>
-            </div>
-        </div>
-    </div> -->
-    <div class="tutorialDiv">
-        <h2 class="TitleH2">Tutorial</h2>
-        <div class="posterContainerDiv">
-            <div class="filteringPosterDiv">
-                <div class="overlayElementsDiv">  
-                    <div class="overlayContentDiv">
-                         <h3 class="tutorialTitleH3 filteringPosterTitleH3">Filter File Types</h3>
-                         <p class="tutorialIntroductionP">Everything you need to manage supported files </br> generally and in detail</p>
-                    </div>
-                    <a class="learnMoreA" id="aLinkToFilterFilesTutorial" href="FilteringTutorial.html">learn more</a>  
-                </div>
-            </div>
-            <div class="settingUpPosterDiv">
-                <div class="overlayElementsDiv">
-                    <div class="overlayContentDiv"> 
-                        <h3 class="setUpANFPTitleH3">Set Up File Picker</h3>
-                        <p class="tutorialIntroductionP">set up ANFP with only 4 blueprint nodes</p>
-                    </div>
-                    <a class="learnMoreA" id="aLinkToSetUpANFPTutorial" href="SetUpANFPTutorial.html">learn more</a>  
-                </div>
-            </div>
-            <div class="DrivePosterDiv">
-                <div class="driveOverlayElementsDiv">
-                    <h3 class="tutorialTitleH3" id="DriveTitleH3Id">Drive & External Apps</h3>  
-                    <div class="driveOverlayButt_PDiv">
-                        <p class="driveIntroductionP" id="TutorialIntroductionPId">Set up special options</p>
-                        <a class="learnMoreA" href="Drive&ExternalAppsTutorial.html">learn more</a>  
-                    </div>
-                </div>
-            </div>
-         </div>
-<!-- responsive posters design for media query less than 804px -->
-         <Ul class="postersContainerUl">
-            <li class="posterItemLi">
-                <img src="assets\mobileFilterTutorialPoster.svg" class="imgCandidate largePosterImg" alt="Filtering"/>
-                <div class="posterOverlayDiv">
-                    <h3 class="overlayTitleH3">Filter File Types</h3>
-                    <p class="overlayContentP">Everything you need to manage supported files </br> generally and in detail</p>
-                    <a class="overlayButtA"  href="FilteringTutorial.html">learn more</a>
-                </div>
-            </li>
-            <li class="posterItemLi">
-                <img src="assets\mobileSettingUpANFPPoster.png" class="imgCandidate largePosterImg" alt="SetUp"/>
-                <div class="posterOverlayDiv">
-                    <h3 class="SetUpANFPoverlayTitleH3">Set Up File Picker</h3>
-                    <p class="overlayContentP">set up ANFP with only 4 blueprint nodes</p>
-                    <a class="overlayButtA" href="SetUpANFPTutorial.html">learn more</a>
-                </div>
-            </li>
-            <li class="posterItemLi">
-                <img src="assets\mobileDriveTutorialPoster.png" class="imgCandidate smallPosterImg" alt="Drive"/>
-                <div class="posterOverlayDiv">
-                    <h3 class="overlayTitleH3">Drive & External APPs</h3>
-                    <p class="overlayContentP">Set up special options</p>
-                    <a class="overlayButtA" href="Drive&ExternalAppsTutorial.html">learn more</a>
-                </div>
-            </li>
-        </Ul>
-    </div>
+
+
 </main>
-<script src="Slider.js"></script>
+    <footer class="docuFooter">
+        <ul class="dFooterUl">
+            <li ><a class="dFooterA" href="index.html">DiamindX</a></li>
+            <li ><a class="dFooterA" href="Support.html">Support</a></li>
+            <li ><a class="dFooterA" href="Tutorials.html">Tutorials</a></li>
+            <li ><a class="dFooterA" href="https://www.fab.com/sellers/Diamind%20Group">FAB</a></li>
+            <li ><a class="dFooterA" href="ANFPDemo.html">Demo</a></li>
+            <li ><a class="dFooterA" href="index.html">Blogs</a></li>
+        </ul>
+    </footer>
 </body>
 </html>

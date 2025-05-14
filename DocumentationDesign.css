@@ -40,6 +40,66 @@ nav{
     background: #1c1c1c;
 }
 
+.newNav{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 80px;
+    background: #141414;
+}
+
+.navBorder{
+    background-color: #878787;
+    width: 100vw;
+    height: 0.5px;
+    position: absolute;
+    bottom: 0;
+    justify-self: center;
+}
+
+.verticalContainerDiv{
+    display: none;
+}
+
+.horizontalContainerDiv{
+    display: flex;
+
+}
+
+.navUl{
+    display: flex;
+    gap: 55px;
+}
+
+.DocuMain{
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+    /* margin-top: 64px; */
+    /* height:100%; */
+    width: 100%;
+    max-width: 1920px;
+    background-color: #141414;
+    align-items: center;
+    justify-content:center;
+}
+
+.docuNavDiv{
+    height: 60px;
+    width: 100vw;
+}
+
+.docuPath{
+    font-family: "inter";
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
 
 button{
     cursor: pointer;
@@ -319,14 +379,7 @@ ul.navigationUl li{
     left: 0;
     visibility: hidden;
 }
-/* mobile responsive dropdown menu */
-/* .menuContainerDiv{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-} */
+
 .hamburgerCheckboxInput{
     display: none;
 }
@@ -1680,6 +1733,31 @@ discount PosterPopup^^^^^^^
     padding-top: 5%;    
 }
 
+.supportedFiltersDiv{
+    justify-items: center;
+}
+
+.typeCategoryContainer{
+    justify-items: start;
+    max-width: 800px;
+    margin: 100px 0;
+}
+
+.typeExtensionsImg{
+    max-width: 772px;
+    height: 100%;
+    justify-content: center;
+    border: #888 solid 1px;
+    border-radius: 7px;
+}
+
+.documentationP{
+ max-width: 800px;
+ justify-self: center;
+ margin: 20px 0;
+ font-size: 1.4rem;
+}
+
 .filteringIntroductionDiv{
     max-width: 1280px;
     width: 100%;
@@ -1723,6 +1801,9 @@ discount PosterPopup^^^^^^^
     font-weight:400;
     font-size: 1.5rem;
     padding-bottom: 1rem;
+    position: relative;
+    justify-items: start;
+    justify-self: start;
 }
 
 .fileTypeListUl{
