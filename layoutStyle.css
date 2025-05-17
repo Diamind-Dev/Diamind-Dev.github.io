@@ -175,8 +175,8 @@ footer{
 }
 
 .dFooterUl{
-    display: flex;
     align-self: center;
+    display: flex;
     list-style: none;
     gap: 20px;
 }
@@ -347,7 +347,7 @@ main{
 
 @media (max-width:910px){
       * {box-sizing:border-box}
-      
+
     main{
        padding-left: 20px;
        /* margin-right: 10px; */

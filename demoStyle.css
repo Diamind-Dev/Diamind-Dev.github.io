@@ -1,3 +1,39 @@
+.dnldDiv{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    border: 1px solid #b9b9b9;
+    padding: 20px 40px; 
+    margin: 70px 0;
+}
+
+.dnldUpl{
+    font-family: 'OpnSnsHbrw';
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px 45px;
+    margin: 7px auto;
+    background: linear-gradient(90.83deg, #49A0F0 0.35%, #5F77FE 99.79%);
+    border-radius: 10px;
+}
+
+.dnldApk{
+    font-family: 'OpnSnsHbrw';
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 7px 45px;
+    margin: 7px auto;
+    border-radius: 10px;
+    background: linear-gradient(90.9deg, #3DB83D 0.31%, #56A136 99.79%);
+
+
+}
+
+
+
+
 .DnldTblDiv{
     max-width: 930px;
     width: 100%;
