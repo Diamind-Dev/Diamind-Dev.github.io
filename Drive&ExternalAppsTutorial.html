@@ -61,11 +61,13 @@
         <div class="gridContainer">
             <h2 class="sub-titles">Set Up File Picker</h2>
             <span class="gridsBorder"></span>
-            <ul class="grid">
+          <ul class="grid">
                 <li class="gridElm">1.1<a class="gridElm gridA" href="SetUpANFPTutorial.html"> Open file picker</a></li>
                 <li class="gridElm">1.2<a class="gridElm gridA" href="SetUpANFPTutorial.html#retrieveFilePath"> Retrieve file path</a></li>
                 <li class="gridElm">1.3<a class="gridElm gridA" href="SetUpANFPTutorial.html#CancelEvent"> Cancel event</a></li>
-                <li class="gridElm">1.4<a class="gridElm gridA" href="SetUpANFPTutorial.html#configOptions"> Config opitons</a></li>
+                <li class="gridElm">1.4<a class="gridElm gridA" href="SetUpANFPTutorial.html#GettingTheLastResult"> Getting The Last Result</a></li>
+                <li class="gridElm">1.5<a class="gridElm gridA" href="SetUpANFPTutorial.html#DeleteFiles"> Delete Files</a></li>
+                <li class="gridElm">1.6<a class="gridElm gridA" href="SetUpANFPTutorial.html#configOptions"> Config opitons</a></li>
             </ul>
         </div>
         <div class="gridContainer">
@@ -84,8 +86,8 @@
             <ul class="grid">
                 <li class="gridElm">3.1<a class="gridElm gridA" href="Drive&ExternalAppsTutorial.html"> Overview</a></li>
                 <li class="gridElm">3.2<a class="gridElm gridA" href="Drive&ExternalAppsTutorial.html#DriveEvents"> Google drive events</a></li>
-                <li class="gridElm">3.4<a class="gridElm gridA" href="Drive&ExternalAppsTutorial.html#DisableOptions"> Disable drive & external apps</a></li>
                 <li class="gridElm">3.3<a class="gridElm gridA" href="Drive&ExternalAppsTutorial.html#cacheFolderTitle"> Cache folder</a></li>
+                <li class="gridElm">3.4<a class="gridElm gridA" href="Drive&ExternalAppsTutorial.html#DisableOptions"> Disable drive & external apps</a></li>
             </ul>
         </div>
         
@@ -104,27 +106,29 @@
 
     <main class="tutorialMain">
      
-            <h1 class="pageTitle">Google Drive & External Apps</h1>
- 
+            <h1 class="pageTitle">Google Drive & External Apps<a class="tag">Updated</a></h1>
+            <p class="articleP">By opening the side panel in the file picker, you have access to Google Drive and external apps like Documents and Downloads. while most of them are work correctly, Unreal Engine currently has some issues with Photos(a Google app) and One Drive(we're working on them for next updates!).
+                <br/>However, in the following page, we'll talk about everything you need to manage the picking from Google Drive and external apps.</p>
+            <img src="assets\PluginDocumentUpdate2025may\SidePanelPics.svg" class="pics" alt="ExternalApps"/>
+
             <h2 class="sub-titles" id="DriveEvents">Google Drive Events</h2>
             <p class="articleP">Once a user selects files from Drive they're downloaded. with following 
-                Events(Download Started/ Download Succeed/ Download Failed), you can make custom notifications</p>
-            <img src="assets\UpdatedImages\DriveDownloadEvents.png" class="pics" alt="Google Drive Events"/>
+                Events(Download Started/ Download Succeed/ Download Failed), you can track the downloading process.</p>
+            <img src="assets\PluginDocumentUpdate2025may\DriveEvents.png" class="pics" alt="Google Drive Events"/>
+          
 
 
+            <h2 class="sub-titles" id="cacheFolderTitle">Cache Folder</h2>
+            <p class="articleP">As shown in the image in the previous section, when the "Download Succeed Event" is triggered, it returns the file path as a string. The downloaded files are stored in an internal directory called the Cache Folder, and the returned path points to this location. The advantage of this system is that users can pick files from Google Drive without needing to download them repeatedly—they are simply accessed from the Cache Folder.</p>
+            <p class="articleP">Files picked from the Downloads and Documents directories cannot be accessed directly due to Android’s security restrictions. Instead, they are automatically copied into the Cache Folder as well, and the returned file path points to the cached copy for further use.</p>
+            <p class="articleP">Here are two Blueprint nodes created for files in the Cache Folder.</p>
+            <img src="assets\PluginDocumentUpdate2025may\UtilitiesCachedFiles.png" class="pics" alt="Access To Copied Files"/>
+            <p class="articleP"><a class="highlightWord">*Get All Cached Files:</a> returns the path of files that are stored in the cache folder(picked from Google Drive, Downloads, and Documents)</p>
+            <p class="articleP">To delete specific files from the Cache Folder, you can still use the 'Delete Files' Blueprint node we covered in the <a class="linkA" href="SetUpANFPTutorial.html#DeleteFiles">set up file picker</a>.</p>
             <h2 class="sub-titles" id="DisableOptions">Disable Drive & external apps</h2>
             <p class="articleP">Users can select files from Google Drive and external apps automatically unless you disable them using "DisableOptions_Enum". Here's how you can do this.</p>
             <p class="articleP">Once you disable these apps, they won't be shown to users.</p>
             <img src="assets\UpdatedImages\DisableExternalApps.png" class="pics" alt="Diable Options Enum" />
-
-
-            <h2 class="sub-titles" id="cacheFolderTitle">Cache Folder</h2>
-            <p class="articleP">The download and document section in file picker drawer files cant
-                 be accessed normally so a copy has to be made then you can access that copied files for further usage.</p>
-            <img src="assets\UpdatedImages\CopiedFiles.png" class="pics" alt="Access To Copied Files"/>
-            <p class="articleP"><a class="highlightWord">*Delete Files: </a> used to delete the downloaded or copied files from the internal storage</p>
-            <p class="articleP"><a class="highlightWord">*GetAllCopiedDocumentFilesPath & GetAllCopiedDownloadFilesPath:</a> the path of the files copied from document and download section could be used to delete some files or knowing what you have in the storage</p>
-            <p class="articleP"><a class="highlightWord">*GetAllDownloadedGoogleDriveFilesPath:</a> allows you to reuse what you have already downloaded from Drive instead of downloading it again</p>
         </div>
     </main>
     <footer class="docuFooter">

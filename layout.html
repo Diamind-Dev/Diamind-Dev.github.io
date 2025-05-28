@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial_FilteringFileType</title>
-    <!-- <link rel="stylesheet" href="DocumentationDesign.css"/> -->
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="layoutStyle.css">
     <link rel="stylesheet" href="TutorialStyle.css">
 </head>
-<body class="background">
+<body>
     <header>
         <nav class="MainNav">
+
 
 
             <a class="navBttn" href="index.html">
@@ -19,6 +19,7 @@
             <a class="navBttn" href="index.html">
                 <img id="ANFPLogo" src="assets\UpdatedImages\ANFPLogo.svg" alt="ANFPIcon"/>
             </a>
+
 
            <div class="menuContainerDiv">
                 <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
@@ -39,6 +40,9 @@
                     </ul>    
                 </div>   
             </div>   
+
+
+
             <ul class="navUl">
                 <li class="navLi"><a class="navLinkA" href="index.html">Home</a></li>
                 <li class="navLi"><a class="navLinkA" href="ANFPEco.html">Eco</a></li>
@@ -49,11 +53,10 @@
             <a class="FabButn" href="https://www.fab.com/sellers/Diamind%20Group">Go FAB</a>
         </nav>
         <nav class="docuPathNav">
-            <button id="roadmap" id="roadmap" class="roadmapBttn"><img src="assets\UpdatedImages\Roadmap.svg" alt="Tutorial roadmap Icon" class="roadmapImg"/></button>
-            <h3 class="docuPath">Tutorials  /  ANFP (full version)  /  filter types ...</h3>
+            <button id="roadmap" class="roadmapBttn"><img src="assets\UpdatedImages\Roadmap.svg" alt="Tutorial roadmap Icon" class="roadmapImg"/></button>
+            <h3 class="docuPath">Tutorials  /  ANFP (full version)  /  Set up ANFP ...</h3>
         </nav>
     </header>
-
     <div id="mapDiv" class="mapContainer">
         <button id="close" class="closeBttn"><img src="assets\UpdatedImages\closeBttn.svg" class="closeImg" alt="close"/></button>
         <h1 class="pageTitle">Tutorials</h1>
@@ -103,35 +106,7 @@
             </ul>
         </div>
     </div>
-
-    <main>
-        <h1 class="pageTitle">Filtering File Types & Supported Files</h1>
-            
-        <p class="articleP">In this tutorial, you'll learn how to configure a filter for supported files. You can set this filter based on
-        <a class="linkA" href="#categoryBaseH2"> general file type categories </a>or<a class="linkA" href="#detailedBaseH2"> specify detailed file extensions.</a>The following lists collect the supported file types, which you can customize using UE Blueprints.</p>
-
-        <img src="assets\filterTutorialPoster.svg" class="pics" alt="FileTypesPoster"/>
-      
-        <h1 class="sub-titles">Setting Filter</h1>
-          
-        <h2 class="sub-titles" >General Category Base</h2>
-        <img src="assets\UpdatedImages\FilteringCategoryBase.png" class="pics" alt="FilteringBasedOnCategory"/>
-        <p class="articleP categoryFilteringP">Once you declare the supported file types, undeclared file types will be disabled.</p>
-        <img src="assets\UpdatedImages\SetupFilePickerAccordingToResultImage.png" class="pics" alt="FilteringBasedOnCategoryWithBlueprints"/>
-        <img src="assets\FilterResult.jpg" class="verPics" alt="ImageOfTheResultOfFilteringFilesInANFP"/>
-           
-        <h2 class="sub-titles" id="detailedFiltering">Specify Detailed Base</h2>
-        <img src="assets\UpdatedImages\SetUpFilePickerInDetail.png" class="pics" alt="SetUpInDetailFilterForMusicCategory"/>
-        <!-- <img src="assets\filterInDetailImage.png" class="FilterInDetailImageImg" alt="SetUpInDetailFilterForImageCategory"/> -->
-        <p class="articleP" >When you apply filters using both general categories and detailed file extensions of the same category, 
-            the detailed file extension filters do not impact on the files.</p>
-        <img src="assets\UpdatedImages\LimitOfSettingBothTypeOfFiltering.png" class="pics" alt="FilteringNote_InterfereBetweenCategoryTypeAndDetailedType"/>
-        <p class="articleP">You can open the file pikcer without setting any filter 
-            though BUT notice that if the file picker is
-            opened _without a filter set_ 
-            the file picker will include all existing file types, which may lead to some unexpected behavior later on.</p>
-        <img src="assets\UpdatedImages\OnlyOpenFilePickerWithoutFilter.png" class="pics" alt="Opening File Picker Without Filter"/>
-    </main>
+    <main></main>
     <footer class="docuFooter">
         <ul class="dFooterUl">
             <li ><a class="dFooterA" href="index.html">DiamindX</a></li>
@@ -142,6 +117,6 @@
             <li ><a class="dFooterA" href="index.html">Blogs</a></li>
         </ul>
     </footer>
-     <script src="logics.js"></script>
+    <script src="logics.js"></script>
 </body>
 </html>

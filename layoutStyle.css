@@ -343,7 +343,18 @@ main{
     transform: translateX(0vw);
 }
 
-
+.tag{
+    color: #000;
+    font-weight: 400;
+    margin-left: 10px;
+    display: inline;
+    padding: 5px 5px;
+    background-color: #9B4AFF;
+    font-family:'OpnSnsHbrw';
+    font-size:1rem; 
+    border-radius: 20px;   
+    white-space: nowrap;
+}
 
 @media (max-width:910px){
       * {box-sizing:border-box}
