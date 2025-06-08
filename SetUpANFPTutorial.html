@@ -62,12 +62,14 @@
             <h2 class="sub-titles">Set Up File Picker</h2>
             <span class="gridsBorder"></span>
             <ul class="grid">
-                <li class="gridElm">1.1<a class="gridElm gridA" href="SetUpANFPTutorial.html"> Open file picker</a></li>
-                <li class="gridElm">1.2<a class="gridElm gridA" href="SetUpANFPTutorial.html#retrieveFilePath"> Retrieve file path</a></li>
+                <li class="gridElm">1.1<a class="gridElm gridA" href="SetUpANFPTutorial.html"> Open File Picker</a></li>
+                <li class="gridElm">1.2<a class="gridElm gridA" href="SetUpANFPTutorial.html#retrieveFilePath"> Retrieve File Path</a></li>
                 <li class="gridElm">1.3<a class="gridElm gridA" href="SetUpANFPTutorial.html#CancelEvent"> Cancel event</a></li>
                 <li class="gridElm">1.4<a class="gridElm gridA" href="SetUpANFPTutorial.html#GettingTheLastResult"> Getting The Last Result</a></li>
                 <li class="gridElm">1.5<a class="gridElm gridA" href="SetUpANFPTutorial.html#DeleteFiles"> Delete Files</a></li>
-                <li class="gridElm">1.6<a class="gridElm gridA" href="SetUpANFPTutorial.html#configOptions"> Config opitons</a></li>
+                <li class="gridElm">1.6<a class="gridElm gridA" href="SetUpANFPTutorial.html#configOptions"> Selection Modes</a></li>
+                <li class="gridElm">1.7<a class="gridElm gridA" href="SetUpANFPTutorial.html#FolderSelection"> Folder Selection</a></li>
+                <li class="gridElm">1.8<a class="gridElm gridA" href="SetUpANFPTutorial.html#GettingFilesInDirectory"> Getting Files In Directory<a class="tag newTag">New</a></li>
             </ul>
         </div>
         <div class="gridContainer">
@@ -76,8 +78,8 @@
             <ul class="grid">
                 <li class="gridElm">2.1<a class="gridElm gridA" href="FilteringTutorial.html"> Overview</a></li>
                 <li class="gridElm">2.2<a class="gridElm gridA" href="SupportedFilterTypes.html"> Supported Filter Types</a></li>
-                <li class="gridElm">2.3<a class="gridElm gridA" href="FilteringTutorial.html#settingFilter"> Set general base filter</a></li>
-                <li class="gridElm">2.4<a class="gridElm gridA" href="FilteringTutorial.html#detailedFiltering"> Set detail base filter</a></li>
+                <li class="gridElm">2.3<a class="gridElm gridA" href="FilteringTutorial.html#settingFilter"> Setting General Base Filter</a></li>
+                <li class="gridElm">2.4<a class="gridElm gridA" href="FilteringTutorial.html#detailedFiltering"> Setting Detail Base Filter</a></li>
             </ul>
         </div>
         <div class="gridContainer">
@@ -100,6 +102,9 @@
                 <li class="gridElm">1.1<a class="gridElm gridA" href="EcoTutorial.html"> Overview</a></li>
                 <li class="gridElm">1.2<a class="gridElm gridA" href="EcoTutorial.html#openEco"> Open file picker</a></li>
                 <li class="gridElm">1.3<a class="gridElm gridA" href="EcoTutorial.html#retrivePathEco"> Retrieve file path</a></li>
+                <li class="gridElm">1.4<a class="gridElm gridA" href="EcoTutorial.html#LastResult"> Getting the Last Result</a></li>
+                <li class="gridElm">1.5<a class="gridElm gridA" href="EcoTutorial.html#Get-DeleteAllCachedFiles"> Cache Folder</a></li>
+                <li class="gridElm">1.6<a class="gridElm gridA" href="EcoTutorial.html#DeleteFiles"> Delete Files</a></li>
             </ul>
         </div>
     </div>
@@ -126,24 +131,29 @@
 
                 <h1 class="sub-titles" id="GettingTheLastResult">Getting The Last Result</h1>
                 <img src="assets\PluginDocumentUpdate2025may\UtilitiesLastResult.png" class="pics" alt="getting the path of the last picked file"/>
+
       
                 <h1 class="sub-titles" id="DeleteFiles">Delete Files</h1>
                 <p class="articleP">By picking files from some sources, like <a class="linkA" href="Drive&ExternalAppsTutorial.html">Google Drive and External apps</a>, they are copied in internal storage. so this Blueprint node allows you to remove them if needed. you can also use this node to remove files from external storage.</p>
                 <img src="assets\PluginDocumentUpdate2025may\UtilitiesDeleteFiles.png" class="pics" alt="Delete files from directory"/>
 
-                <h1 class="sub-titles" id="configOptions">Configuring Selection Options (Single Selection/ Multi Selection/ Folder Selection)</h1>
+                <h1 class="sub-titles" id="configOptions">Switching between selection modes(Single Selection/ Multi Selection/ Folder Selection)</h1>
                 <img src="assets\UpdatedImages\SelectionOptions.png" class="pics" alt="Enum of Mode Selection"/>
 
-                    <p class="articleP">!!!Enabling "Folder Selection" disables individual file selection,
-                         allowing the user to select only the entire files of a folder.</p>
-             
-                        <h3 class="sub-titles">Folder Selection</h3>
-                        <img  src="assets\UpdatedImages\FolderSelectionMode.png" class="pics" alt="config folder selection Img"/>
-                        <img  src="assets\ScreenShotFolderSelection.png" class="verPics" alt="screenshot of ANFP in folder selection mode"/>
-    
                         <h3 class="sub-titles">Multi Seleciton</h3>
                         <img  src="assets\UpdatedImages\MultiSelectionMode.png" class="pics" alt="config multi selection Img"/>
                         <img  src="assets\ScreenShotMultiSelection.png" class="verPics" alt="screenshot of ANFP in multi selection mode"/>
+             
+                        <h3 class="sub-titles" id="FolderSelection">Folder Selection</h3>
+                        <p class="articleP">In folder selection mode user selects a folder at runtime, and path of all files in selected folder, are returned.</p>
+                        <p class="articleP">!!!Enabling "Folder Selection" disables individual file selection,
+                         allowing the user to select only the entire files of a folder.</p>
+                        <img  src="assets\UpdatedImages\FolderSelectionMode.png" class="pics" alt="config folder selection Img"/>
+                        <img  src="assets\ScreenShotFolderSelection.png" class="verPics" alt="screenshot of ANFP in folder selection mode"/>
+    
+                        <h3 class="sub-titles" id="GettingFilesInDirectory">Get Files In Directory<a class="tag newTag">New</a></h3>
+                        <p class="articleP">This function is a development-time utility for folder selection. It allows the developer to retrieve the paths of all files within a directory, with optional extension filtering (not case- or dot-sensitive).</p>
+                        <img src="assets\PluginUpdateJune2025\Pro-v1.1.1\getFilesIndirectory.png" class="pics" alt="getting files in a directory "/>
        
     </main>
     <footer class="docuFooter">

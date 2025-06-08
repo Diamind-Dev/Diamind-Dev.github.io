@@ -60,13 +60,15 @@
         <div class="gridContainer">
             <h2 class="sub-titles">Set Up File Picker</h2>
             <span class="gridsBorder"></span>
-          <ul class="grid">
-                <li class="gridElm">1.1<a class="gridElm gridA" href="SetUpANFPTutorial.html"> Open file picker</a></li>
-                <li class="gridElm">1.2<a class="gridElm gridA" href="SetUpANFPTutorial.html#retrieveFilePath"> Retrieve file path</a></li>
+            <ul class="grid">
+                <li class="gridElm">1.1<a class="gridElm gridA" href="SetUpANFPTutorial.html"> Open File Picker</a></li>
+                <li class="gridElm">1.2<a class="gridElm gridA" href="SetUpANFPTutorial.html#retrieveFilePath"> Retrieve File Path</a></li>
                 <li class="gridElm">1.3<a class="gridElm gridA" href="SetUpANFPTutorial.html#CancelEvent"> Cancel event</a></li>
                 <li class="gridElm">1.4<a class="gridElm gridA" href="SetUpANFPTutorial.html#GettingTheLastResult"> Getting The Last Result</a></li>
                 <li class="gridElm">1.5<a class="gridElm gridA" href="SetUpANFPTutorial.html#DeleteFiles"> Delete Files</a></li>
-                <li class="gridElm">1.6<a class="gridElm gridA" href="SetUpANFPTutorial.html#configOptions"> Config opitons</a></li>
+                <li class="gridElm">1.6<a class="gridElm gridA" href="SetUpANFPTutorial.html#configOptions"> Selection Modes</a></li>
+                <li class="gridElm">1.7<a class="gridElm gridA" href="SetUpANFPTutorial.html#FolderSelection"> Folder Selection</a></li>
+                <li class="gridElm">1.8<a class="gridElm gridA" href="SetUpANFPTutorial.html#GettingFilesInDirectory"> Getting Files In Directory<a class="tag newTag">New</a></li>
             </ul>
         </div>
         <div class="gridContainer">
@@ -75,8 +77,8 @@
             <ul class="grid">
                 <li class="gridElm">2.1<a class="gridElm gridA" href="FilteringTutorial.html"> Overview</a></li>
                 <li class="gridElm">2.2<a class="gridElm gridA" href="SupportedFilterTypes.html"> Supported Filter Types</a></li>
-                <li class="gridElm">2.3<a class="gridElm gridA" href="FilteringTutorial.html#settingFilter"> Set general base filter</a></li>
-                <li class="gridElm">2.4<a class="gridElm gridA" href="FilteringTutorial.html#detailedFiltering"> Set detail base filter</a></li>
+                <li class="gridElm">2.3<a class="gridElm gridA" href="FilteringTutorial.html#settingFilter"> Setting General Base Filter</a></li>
+                <li class="gridElm">2.4<a class="gridElm gridA" href="FilteringTutorial.html#detailedFiltering"> Setting Detail Base Filter</a></li>
             </ul>
         </div>
         <div class="gridContainer">
@@ -99,38 +101,45 @@
                 <li class="gridElm">1.1<a class="gridElm gridA" href="EcoTutorial.html"> Overview</a></li>
                 <li class="gridElm">1.2<a class="gridElm gridA" href="EcoTutorial.html#openEco"> Open file picker</a></li>
                 <li class="gridElm">1.3<a class="gridElm gridA" href="EcoTutorial.html#retrivePathEco"> Retrieve file path</a></li>
+                <li class="gridElm">1.4<a class="gridElm gridA" href="EcoTutorial.html#LastResult"> Getting the Last Result</a></li>
+                <li class="gridElm">1.5<a class="gridElm gridA" href="EcoTutorial.html#Get-DeleteAllCachedFiles"> Cache Folder</a></li>
+                <li class="gridElm">1.6<a class="gridElm gridA" href="EcoTutorial.html#DeleteFiles"> Delete Files</a></li>
             </ul>
         </div>
     </div>
 
     <main>
-            <h1 class="pageTitle">ANFP Eco Tutorial</h1>
+            <h1 class="pageTitle">ANFP Eco Tutorial<a class="tag">Updated</a></h1>
             
-            <p class="articleP">In this tutorial there are 2 sections. In the first section you will learn how to set up Android Native File Picker Eco for <a class="linkA" href="#OpenFilePicker">opening file picking dialog</a> and how to <a class="linkA" href="#RetrieveFilePath">retrieve paths</a> in the next one.</p>
+            <h5 class="sub-titles">Tutorial Overview</h5>
+            <p class="articleP">This tutorial is divided into two main sections, each covering essential functionality of the Android Native File Picker (ANFP) Eco:.</p>
+            <p class="articleP"><a class="boldWords">1.Setting up ANFP Eco:</a><br/>Learn how to properly integrate and configure the Android Native File Picker Eco system in your Unreal Engine project to enable native file selection dialogs on Android devices.</p>
+            <p class="articleP"><a class="boldWords">2.Retrieving File Paths:</a><br/>Discover how to access and use the paths of files selected through the file picker, enabling further interaction with user-selected content within your application.</p>
         
         <!-- <img src="assets\filterTutorialPoster.svg" class="FilteringPosterImg" alt="FileTypesPoster"/> -->
         
-            <h1 class="sub-titles" id="openEco">Open File Picker</h1>
+            <h2 class="sub-titles" id="openEco">Open File Picker</h2>
             
                 <!-- <h2 class="filteringTypeH2" >Open File Picker Blueprint Node</h2> -->
-                <img src="assets/ANFP_Eco/OpenFilePickerEco.png" class="pics" alt="OpenFilePicker"/>
+                <img src="assets\PluginUpdateJune2025\Eco-v1.1.0\OpenFilePickerEco.png" class="pics" alt="OpenFilePicker"/>
                 <!-- <p class="articleP categoryFilteringP">This node receives an enum as argument specifying selection mode in a file picking session.</p> -->
 
-            <h1 class="sub-titles" id="retrivePathEco">Retrieve File Path</h1>
+            <h2 class="sub-titles" id="retrivePathEco">Retrieve File Path</h2>
             
-                <img src="assets/ANFP_Eco/RetrieveFilePath.png" class="pics" alt="RetrieveFilePath"/>
-                <p class="articleP">These nodes should always be called before open file picker especially Create Callback Object blueprint node.</p>
-                <img src="assets/ANFP_Eco/GetLastResult.png" class="pics" alt="LastFilePickingResult"/>
-                <p class="articleP">This node returns result of the last file picking session.</p>
-                <img src="assets/ANFP_Eco/Utilities.png" class="pics" alt="Utilities"/>
-                <p class="articleP">Using these nodes, you can retrieve an array of strings containing the file paths 
-                    of files copied from the Download and Document sections of the file picker.
-                    You can then reuse them or delete all at once using the Delete Files node.</p>
-                <p class="articleP ">You might wonder why these files are copied.
-                     This happens because some files are not directly accessible (due to restricted access on certain devices),
-                      so they need to be copied to the app's internal data path. 
-                      The paths of these files are then returned using Event Dispatchers.
-                       With these nodes, you can easily manage those files.</p>    
+            <img src="assets\PluginUpdateJune2025\Eco-v1.1.0\RetrieveFilePathEco.png" class="pics" alt="RetrieveFilePath"/>
+            <p class="articleP">These nodes should always be called before open file picker especially Create Callback Object blueprint node.</p>
+            <h2 class="sub-titles" id="LastResult">Getting The Last Result</h2>
+            <img src="assets\PluginUpdateJune2025\Eco-v1.1.0\GetLastResultEco.png" class="pics" alt="LastFilePickingResult"/>
+            <p class="articleP">This node returns result of the last file picking session.</p>
+            <h2 class="sub-titles" id="Get-DeleteAllCachedFiles">Cache Folder</h2>
+            <p class="articleP">Files picked from the Downloads and Documents directories cannot be accessed directly due to Android’s security restrictions. Instead, they are automatically copied into the Cache Folder as well, and the returned file path points to the cached copy for further use.</p>
+            <p class="articleP">Here are two Blueprint nodes created for files in the Cache Folder.</p>
+            <img src="assets\PluginUpdateJune2025\Eco-v1.1.0\CacheMethods.png" class="pics" alt="Access To Copied Files"/>
+            <p class="articleP"><a class="highlightWord">*Get All Cached Files:</a> returns the path of files that are stored in the cache folder(picked from Downloads, and Documents)</p>
+            <h2 class="sub-titles" id="DeleteFiles">Delete Files</h2>
+            <p class="articleP">use the 'Delete Files' To delete specific files from the Cache and other Folders.</p>
+            <img src="assets\PluginUpdateJune2025\Eco-v1.1.0\DeleteFIleEco.png" class="pics" alt="delete Files in Eco"/>
+       
     </main>
     <footer class="docuFooter">
         <ul class="dFooterUl">

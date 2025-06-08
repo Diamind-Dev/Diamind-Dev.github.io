@@ -223,9 +223,19 @@ main{
 }
 
 .articleP{
+    text-align: left;
     font-family: 'OpnSnsHbrw';
     font-size: 1.5rem;
     font-weight: 400;
+    color: white;
+}
+
+.boldWords{
+    align-content: flex-start;
+    text-align: left;
+    font-family: 'OpnSnsHbrw';
+    font-size: 1.5rem;
+    font-weight: 700;
     color: white;
 }
 
@@ -354,6 +364,11 @@ main{
     font-size:1rem; 
     border-radius: 20px;   
     white-space: nowrap;
+}
+
+.newTag{
+     background-color: #80ff4a;
+     padding: 5px 10px;
 }
 
 @media (max-width:910px){
