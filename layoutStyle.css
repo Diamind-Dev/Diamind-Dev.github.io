@@ -372,6 +372,9 @@ main{
 }
 
 @media (max-width:910px){
+    html{
+        font-size:10px;
+    }
       * {box-sizing:border-box}
 
     main{
@@ -423,6 +426,122 @@ main{
         padding:10px 100% 10px 0;
         margin-top: 20px;
         margin-bottom: 20px;   
+    }
+}
+
+/* Event Poster */
+
+
+.popupOverlay{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+}
+
+#closePopupBttn{
+    position: fixed;
+    display: flex;
+    right: 1%;
+    top: -100px;
+    background: transparent;
+    border: none;
+    justify-items: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    z-index: 1010;
+}
+
+.closeBttn{
+    display: flex;
+    width: 5px;
+    height: 30px;
+    background-color: #E0E0E0;
+    border-radius: 10px;
+    transform: translate(0);
+}
+
+#closeLine1st{
+    transform: rotate(45deg);
+    position: absolute;
+    left: 6px;
+}
+#closeLine2nd{
+    transform: rotate(-45deg);
+}
+
+.posterWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1002;
+  display: inline-block;
+}
+
+.discountPosterDesktopPopup {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: block;
+}
+
+/* This is the link in bottom-right of the image */
+.EventLink {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2rem;
+  background-color: #ffffff00;
+  padding: 0px 75px;
+  border: #F9E1A9 solid 4px;
+  border-radius: 90px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Summer';
+  transition: 0.3s ease-in-out;
+}
+
+.EventLink:hover{
+    background-color: #F9E1A9;
+    color: #F59213;
+}
+
+   @font-face {
+    font-family: 'Summer';
+    src: url('assets/fonts/Alkatra-Bold.ttf') format('truetype');
+}
+
+@media (max-width: 890px){
+    .EventLink{
+        font-size: 1.5rem;
+        padding: 2px 50px;
+    }
+}
+
+@media (max-width: 590px){
+    .EventLink{
+        font-size: 1.3rem;
+        padding: 2px 30px;
+    }
+}
+
+@media (max-width: 450px){
+    .EventLink{
+        font-size: 1.1rem;
+        padding: 0px 25px;
+        border: #F9E1A9 solid 2px;
+    }
+}
+
+@media (max-width: 320px){
+    .EventLink{
+        font-size: 0.7rem;
+        padding: 2px 30px;
     }
 }
 
