@@ -3,20 +3,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const closeBttn =document.getElementById('close');
     const roadmapPanel = document.getElementById('mapDiv');
 
-
-// EventPoster
-    const closeSalePoster = document.getElementById('closePopupBttn');
-    const salePoster = document.getElementById('SalePstrContainer');
-
-
-    if(closeSalePoster){
-        closeSalePoster.addEventListener('click', () =>{
-            salePoster.style.display = 'none';
-        })
-    }
-
     
-
     const displayValue = window.getComputedStyle(roadmapPanel).display;
     roadmapPanel.style.display = 'none';
 
