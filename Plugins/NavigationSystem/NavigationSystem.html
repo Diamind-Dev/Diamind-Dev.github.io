@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>NavigationSystemPlugin</title>
+    <link rel="stylesheet" href="../DocLayoutStyle.css"/>
+    <link rel="stylesheet" href="NavSystemStyle.css">
+    <link rel="icon" type="image/png" href="assets\Diamind\DiamindIcon.svg">
+
+</head>
+<body class="background">
+    <h1 class="start">بسم الله الرحمن الرحیم</h1>
+    <h1 class="start">لا حول و لا قوة الا باالله العلی العظیم</h1>
+    <header>
+        <nav class="MainNav">
+            <a class="navBttn" href="index.html">
+                <img id="DiamindLogo" src="..\..\assets\UpdatedImages\DiamindNewLogo.svg"  alt="DiamindIcon"/>
+            </a>
+
+           <div class="menuContainerDiv">
+                <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
+                <div class="hamburgerIconDiv">
+                    <label for="openMenuInput" id="hamburgerLabel">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </label>    
+                </div>
+                <div class="menuPaneDiv">
+                    <ul class="mobileNavigationUl">
+                        <li class="navLi"><a class="navLinkA" href="index.html">Documentations</a></li>
+                        <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Listings</a></li>
+                        <li class="navLi"><a class="navLinkA" href="../../index.html">Plugins</a></li>
+                        <li class="navLi"><a class="navLinkA" href="../../index.html">Home</a></li>
+                    </ul>    
+                </div>   
+            </div>   
+
+
+            <ul class="navUl">
+                <li class="navLi"><a class="navLinkA" href="index.html">Documentations</a></li>
+                <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Listings</a></li>
+                <li class="navLi"><a class="navLinkA" href="../../index.html">Plugins</a></li>
+                <li class="navLi"><a class="navLinkA" href="../../index.html">Home</a></li>
+            </ul>
+            <a class="PluginBttn" href="https://www.fab.com/sellers/Diamind%20Group">Get Plugin</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="SidePanel">
+            <ul class="DocOutline">
+                <li class="Sub1"><a class="DocLink" href="#NavSys">Navigation System(intro)</a></li>
+                <li class="Sub1"><a class="DocLink" href="#Types">Navigation Types</a></li>
+                <li class="Sub1"><a class="DocLink" href="#Wypnt">Waypoint(intro)</a></li>
+                <li class="Sub2"><a class="DocLink" href="#WypntStp">How To Use</a></li>
+                <li class="Sub2"><a class="DocLink" href="#WypntFncVars">Function and variables</a></li>
+                <li class="Sub3"><a class="DocLink" href="#WypntPlyrEvnt">PlayerArrivedEvent</a></li>
+                <li class="Sub3"><a class="DocLink" href="#MinDstncVar">Float MinDistance</a></li>
+                <li class="Sub1"><a class="DocLink" href="#CmpsMrkr">Compass + Markers</a></li>
+                <li class="Sub2"><a class="DocLink" href="#CmpsCls">Related Classes</a></li>
+                <li class="Sub2"><a class="DocLink" href="#CmpsStp">Compass Setup</a></li>
+                <li class="Sub2"><a class="DocLink" href="#AdMrkr">Adding Marker</a></li>
+                <li class="Sub2"><a class="DocLink" href="#CmpsFncVar">Function and variables</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DfltCmps">SetCompassAsDefault()</a></li>
+                <li class="Sub3"><a class="DocLink" href="#CmpsPlyrArv">PlayerArrivedEvent() & Int MinDistance;</a></li>
+                <li class="Sub3"><a class="DocLink" href="#remvMrkr">RemoveCompassMarker()</a></li>
+                <li class="Sub1"><a class="DocLink" href="#conclsn">Conclusion and Links</a></li>
+            </ul>
+        </div>
+
+
+        <div class="MainPanel">
+        <div class="Documentation">
+            <img id="PluginPoster" class="DocImg" src="NavigationSystemAssets\NavigationSystem.svg"  alt="NavigationSystem"/>
+            <h1 class="PluginName" id="NavSys">Navigation System</h1>
+            <h2 class="Sub-Title1" id="WypntCmps">Waypoint & Compass + Marker</h2>
+            <p class="Doc">Using the Navigation HUD, you can guide the player to their destination, point to locations in the game world, and show where to go for the next mission. This plugin provides two types of Navigation HUDs: Waypoint and Compass with Markers.</p>
+            <h2 class="Sub-Title1" id="Types">Navigation types</h2>
+
+            
+            <div class="BoxContainer">
+                <div class="GridBox2">
+                    <h3 class="BoxTitle">Waypoint</h3>
+                    <p class="BoxDoc">A world widget placed in the game world, visible even behind objects. Guides the player with distance and direction.</p>
+                </div>
+                <div class="GridBox2">
+                    <h3 class="BoxTitle">Compass + Markers</h3>
+                    <p class="BoxDoc">A minimal compass with support for custom markers. Each marker can have a name, color, and priority level.</p>
+                </div>
+            </div>
+
+
+            <div class="SingleBox">
+                <p class="SingleBoxDoc">You can use both the Compass and Waypoint at the same time, or use just one of them.</p>
+            </div>
+
+
+            <h2 class="Sub-Title1" id="Wypnt">Waypoint</h2>
+            <p class="Doc">Waypoint is a world-space HUD element that appears in the game world and remains visible even when behind objects. It shows the distance to the destination and an arrow pointing toward it.</p>
+            <img class="DocImg" id="WaypointImg" src="NavigationSystemAssets\Waypoint.svg" alt="Waypoint Image"/>
+            <h3 class="Sub-Title2" id="WypntStp">How to use</h3>
+            <p class="Doc">1. Place BP_Waypoint actor in the world at the destination.<br/>2. Set the destination Name, Color, and a single word for priority(e.g., A, B)<br/>3. Optionally, assign an Icon instead of text or color.<br/>4. The waypoint will automatically guide the player with distance and direction.</p>
+            <img class="DocImg" id="WaypointClassesImg" src="NavigationSystemAssets\WaypointClass.svg" alt="Waypoint classes"/>
+            <h3 class="Sub-Title2" id="WypntFncVars">Functions and Variables</h3>
+            <h4 class="Sub-Title3" id="WypntPlyrEvnt">BP_Waypoint.PlayerArrivedEvent()</h4>
+            <p class="Doc">When player reaches to the minimum distance of BP_Waypoint, this event is called.it removes the waypoint actor, clears timer, and shows a notification.</p>
+            <img class="DocImg" id="PlayerArrivedImg" src="NavigationSystemAssets\PlayerArrivedEvent.svg" alt="BP_Waypoint.PlayerArrivedEvent()"/>
+            <h4 class="Sub-Title3" id="MinDstncVar">Float MinDistance;</h4>
+            <img class="DocImg" id="MinDistanceImg" src="NavigationSystemAssets\WaypointMinDistance.svg" alt="Float MinDistance">
+            <h2 class="Sub-Title1" id="CmpsMrkr">Compass + Marker</h2>
+            <p class="Doc">The Compass is a classic compass HUD element. You can add custom markers to it, each with a name, color, and priority. The compass shows the distance to the marker with the lowest priority value (i.e., highest importance).</p>
+            <img class="DocImg" id="CompassImg" src="NavigationSystemAssets\Compass.svg" alt="Compass Image"/>
+            <h3 class="Sub-Title2" id="CmpsCls">Related Classes</h3>
+            <img class="DocImg" id="CompassClassesImg" src="NavigationSystemAssets\CompassClasses.svg" alt="Compass Classes Image"/>
+            <h3 class="Sub-Title2" id="CmpsStp">Compass Setup</h3>
+            <p class="Doc">For setting up the traditional compass, you only have to add “AC_CompaasHUDManager” actor component to player character. it creates and adds W_Compass widget to viewport on eventBeginPlay(). you can create or destroy it from this actor component.</p>
+            <img class="DocImg" id="CompassACImg" src="NavigationSystemAssets\AC_CompassHUDManager.svg" alt="AC_CompassHUDManager Image"/>
+            <h3 class="Sub-Title2" id="AdMrkr">Adding Marker</h3>
+            <p class="Doc">You can add custom markers to compass by adding “BP_CompassTarget” to game world, initialize its default variables, name, color, icon(optional) and priority. The compass shows the distance to the marker with the lowest priority value (i.e., highest importance).</p>
+            <img class="DocImg" id="MarkerSettingsImg" src="NavigationSystemAssets\AddingMarker.svg" alt="MarkerSettings"/>
+            <h3 class="Sub-Title2" id="CmpsFncVar">Functions and Variables</h3>
+            <h4 class="Sub-Title3" id="DfltCmps">W_Compass.SetCompassAsDefault()</h4>
+            <p class="Doc">Changes marker compass to traditional compass.</p>
+            <h4 class="Sub-Title3" id="CmpsPlyrArv">W_Compass.PlayerArrivedEvent() & Int MinDistance;</h4>
+            <p class="Doc">When player reaches the MinDistance of BP_CompassTarget the PlayerArrivedEvent() is called to remove the marker from compass. </p>
+            <h4 class="Sub-Title3" id="remvMrkr">W_Compass.RemoveCompassMarker()</h4>
+            <img class="DocImg" id="RemoveMarker" src="NavigationSystemAssets\RemoveMarker.svg" alt="RemoveMarker"/>
+            
+            <div class="ConclusionDiv" id="conclsn">
+                <div class="ContentDiv">
+                    <h2 class="Conclusion">Navigation System plugin<br/> is now available on Fab</h2>
+                    <a class="FabLink">Get Plugin</a>
+                    <a class="Email">Diamind.group@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+    <footer class="docuFooter">
+        <ul class="dFooterUl">
+            <li ><a class="dFooterA" href="index.html">Documentations</a></li>
+            <li ><a class="dFooterA" href="ANFPDemo.html">About Us</a></li>
+            <li ><a class="dFooterA" href="Tutorials.html">Plugins</a></li>
+            <li ><a class="dFooterA" href="https://www.fab.com/sellers/Diamind%20Group">Help</a></li>
+            <li ><a class="dFooterA" href="Support.html">Fab</a></li>
+        </ul>
+        <div class="IconContainer">
+            <img src="..\..\assets\Diamind\FabIcon.svg" class="footerIcon" alt="FabIcon"/>
+            <img src="..\..\assets\Diamind\UnrealIcon.svg" class="footerIcon" alt="UEIcon"/>
+            <img src="..\..\assets\Diamind\DiamindIcon.svg" class="footerIcon" alt="DiamindIcon"/>
+        </div>
+    </footer>
+<script src="logics.js"></script>
+</body>
+</html>

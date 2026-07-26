@@ -1,0 +1,63 @@
+.BoxContainer{
+    display: flex;
+    gap: 20px;
+    max-width: 780px;
+}
+
+.GridBox2{
+    border:0.5px solid #878787; 
+    padding-bottom: 20px;
+}
+
+.BoxTitle
+{
+    padding-left: 10px;
+}
+
+.BoxDoc{
+    color: white;
+    padding-left: 10px;
+}
+
+.SingleBoxDoc{
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#WaypointImg{
+    max-width: 680px;
+}
+
+#WaypointClassesImg{
+    max-width: 950px;
+}
+
+#PlayerArrivedImg{
+    max-width: 1260px;
+}
+
+#MinDistanceImg{
+    max-width: 360px;
+}
+
+#CompassImg{
+    max-width: 480px;
+}
+
+#CompassClassesImg{
+    max-width: 720px;
+}
+
+#CompassACImg{
+    max-width: 1260px;
+}
+
+#MarkerSettingsImg{
+    max-width: 720px;
+}
+
+#RemoveMarker{
+    max-width: 1260px;
+}
+
