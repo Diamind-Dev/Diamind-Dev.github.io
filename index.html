@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>ANFPDocumentation</title>
+    <link rel="stylesheet" href="layoutStyle.css"/>
+    <link rel="stylesheet" href="IndexStyle.css">
+    <link rel="icon" type="image/png" href="assets\Diamind\DiamindIcon.svg">
+
+</head>
+<body class="background">
+    <h1 class="start">بسم الله الرحمن الرحیم</h1>
+    <h1 class="start">لا حول و لا قوة الا باالله العلی العظیم</h1>
+    <header>
+        <nav class="MainNav">
+            <a class="navBttn" href="index.html">
+                <img id="DiamindLogo" src="assets\UpdatedImages\DiamindNewLogo.svg"  alt="DiamindIcon"/>
+            </a>
+
+           <div class="menuContainerDiv">
+                <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
+                <div class="hamburgerIconDiv">
+                    <label for="openMenuInput" id="hamburgerLabel">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </label>    
+                </div>
+                <div class="menuPaneDiv">
+                    <ul class="mobileNavigationUl">
+                        <li class="navLi"><a class="navLinkA" href="index.html">Documentations</a></li>
+                        <li class="navLi"><a class="navLinkA" href="Contact.html">Support</a></li>
+                        <li class="navLi"><a class="navLinkA" href="index.html">Plugins</a></li>
+                        <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Listings</a></li>         
+                    </ul>    
+                </div>   
+            </div>   
+
+
+            <ul class="navUl">
+                <li class="navLi"><a class="navLinkA" href="index.html">Documentations</a></li>
+                <li class="navLi"><a class="navLinkA" href="Contact.html">Support</a></li>
+                <li class="navLi"><a class="navLinkA" href="index.html">Plugins</a></li>
+                <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Listings</a></li>
+            </ul>
+            <a class="FabButn" href="https://www.fab.com/sellers/Diamind%20Group">Go FAB</a>
+        </nav>
+    </header>
+
+
+
+        
+    <div class="Hero">
+        <img src="assets\Diamind\DiamindHeroImage.svg" class="layer posterOverlay" alt="ANFP-Eco Poster"/>
+       <div class="HeroContent">
+            <h1 class="HeroTitle">Game Making Is Cool!</h1>
+            <h2 class="HeroIntro">Diamind is a group of students passionate about game development with Unreal Engine.<br/>We turn our discoveries into plugins that help the developer community save time,<br/> eliminate repetitive work, and focus on creating awesome games.</h2>
+            <a class="PluginsBttn">Explore Plugins</a>
+       </div>
+    </div>
+
+    <div class="PluginDiv">
+        <img class="PluginImg" src="Plugins\PluginsPosters\NavigationSystem.svg" alt="Navigation System Plugin"/>
+        <div class="PluginContent">
+            <h2 class="PluginName">Navigation System Plugin</h2>
+            <h3 class="ShortIntro">Waypoint & Compass + Marker</h3>
+            <p class="PluginIntro">Using the Navigation HUD, you can guide the player to their destination, point to locations in the game world, and show where to go for the next mission. </p>
+            <a class="PluginLink" href="Plugins/NavigationSystem/NavigationSystem.html">See Details</a>
+        </div>
+    </div>
+
+    <div class="PluginDiv">
+        <div class="PluginContent">
+            <h2 class="PluginName">Android Native file picker</h2>
+            <h3 class="ShortIntro">Google drive and filter File types</h3>
+            <p class="PluginIntro">ANFP fills the gap in Unreal Engine Android apps by providing a native file selection system, making them look more professional.</p>
+            <a class="PluginLink" href="Plugins\AndroidNativeFilePicker\ANFP.html">See Details</a>
+        </div>
+        <img class="PluginImg" src="Plugins\PluginsPosters\ANFP Poster.svg" alt="ANFP"/>
+    </div>
+
+    <div class="PluginDiv" id="ANFPEco">
+        <img class="PluginImg" src="Plugins\PluginsPosters\ANFP Eco Poster.svg" alt="ANFP Eco"/>
+        <div class="PluginContent">
+            <h2 class="PluginName">Android native File Picker (Eco)</h2>
+            <h3 class="ShortIntro">Browse Files, Pick File, Get Path.</h3>
+            <p class="PluginIntro">ANFP Eco is a streamlined version of ANFP. It offers the simplest way to select files from storage within a game, returning the file path as a string variable.</p>
+            <a class="PluginLink" href="Plugins\AndroidNativeFilePicker\ANFPEco.html">See Details</a>
+        </div>
+    </div>
+
+    <footer class="docuFooter">
+        <ul class="dFooterUl">
+            <li ><a class="dFooterA" href="index.html">Documentations</a></li>
+            <li ><a class="dFooterA" href="index.html">About Us</a></li>
+            <li ><a class="dFooterA" href="index.html">Plugins</a></li>
+            <li ><a class="dFooterA" href="contact.html">Help</a></li>
+            <li ><a class="dFooterA" href="https://www.fab.com/sellers/Diamind%20Group"">Fab</a></li>
+        </ul>
+        <div class="IconContainer">
+            <img src="assets\Diamind\FabIcon.svg" class="footerIcon" alt="FabIcon"/>
+            <img src="assets\Diamind\UnrealIcon.svg" class="footerIcon" alt="UEIcon"/>
+            <img src="assets\Diamind\DiamindIcon.svg" class="footerIcon" alt="DiamindIcon"/>
+        </div>
+    </footer>
+<script src="logics.js"></script>
+</body>
+</html>
