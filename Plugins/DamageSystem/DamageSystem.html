@@ -1,0 +1,1220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>DamageSystemPlugin</title>
+    <link rel="stylesheet" href="../DocLayoutStyle.css"/>
+    <link rel="stylesheet" href="DamageSystem.css">
+    <link rel="icon" type="image/png" href="assets\Diamind\DiamindIcon.svg">
+
+</head>
+<body class="background">
+    <h1 class="start">بسم الله الرحمن الرحیم</h1>
+    <h1 class="start">لا حول و لا قوة الا باالله العلی العظیم</h1>
+    <header>
+        <nav class="MainNav">
+            <a class="navBttn" href="../../index.html">
+                <img id="DiamindLogo" src="..\..\assets\UpdatedImages\DiamindNewLogo.svg"  alt="DiamindIcon"/>
+            </a>
+
+           <div class="menuContainerDiv">
+                <input type="checkbox" id="openMenuInput" class="hamburgerCheckboxInput">
+                <div class="hamburgerIconDiv">
+                    <label for="openMenuInput" id="hamburgerLabel">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </label>    
+                </div>
+                <div class="menuPaneDiv">
+                    <ul class="mobileNavigationUl">
+                        <li class="navLi"><a class="navLinkA" href="../../index.html#FirstPlugin">Documentations</a></li>
+                        <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Listings</a></li>
+                        <li class="navLi"><a class="navLinkA" href="../../index.html#FirstPlugin">Plugins</a></li>
+                        <li class="navLi"><a class="navLinkA" href="../../index.html">Home</a></li>
+                    </ul>    
+                </div>   
+            </div>   
+
+
+            <ul class="navUl">
+                        <li class="navLi"><a class="navLinkA" href="../../index.html#FirstPlugin">Documentations</a></li>
+                        <li class="navLi"><a class="navLinkA" href="https://www.fab.com/sellers/Diamind%20Group">Listings</a></li>
+                        <li class="navLi"><a class="navLinkA" href="../../index.html#FirstPlugin">Plugins</a></li>
+                        <li class="navLi"><a class="navLinkA" href="../../index.html">Home</a></li>
+            </ul>
+            <a class="PluginBttn" href="https://www.fab.com/listings/b0e60db0-27a2-4575-9922-cc45bc0fdbbc">Get Plugin</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="SidePanel">
+            <ul class="DocOutline">
+                <li class="Sub1"><a class="DocLink" href="#DmgSys">Damage System(intro)</a></li>
+                <li class="Sub1"><a class="DocLink" href="#Types">System Overview</a></li>
+                <li class="Sub1"><a class="DocLink" href="#DmgDir">Damage Direction Indicator(intro)</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgRltdCls">Related Classes</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgDirStp">How to Set up</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgDirAC">AC_IndicatorWidgetManger</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirACVar1">MaxNumOfIndicator</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirACVar2">IndicatorFrameRef</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirACFunc1">AddDamageFrameToViewport()</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirACFunc2">RemoveDamageIndicatorFrame()</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgDirWDmgFrame">WBP_DamageIndicatorFrame</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirWDmgFrameVar1">AvailableIndicatorElements</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirWDmgFrameVar2">Enemy-IndicatorElementPair</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirWDmgFrameFunc1">AssignIndicatorToEnemy()</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgDirWLmnt">WBP_DamageIndicatorElement</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirWLmntVar1">IndicatorTimer</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirWLmntFunc1">EnableDamageIndicator()</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgDirWLmntFunc2">DisableIndicatorElement()</a></li>
+                <li class="Sub1"><a class="DocLink" href="#DmgBldFx">Bleeding FX(intro)</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgBldFXRltdCls">Related Classes</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgBldFXStp">How to use</a></li>
+                <li class="Sub2"><a class="DocLink" href="#DmgBldFXAC">AC_BloodFX</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACVar1">BloodFade</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACVar2">TimerParam</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACVar3">MinBloodFade</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACVar4">MaxBloodFade</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACVar5">BloodIntensity</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACVar6">BloodTime</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACVar7">IsBleeding</a></li>
+                <li class="Sub3"><a class="DocLink" href="#DmgBldFXACFunc1">BleedingFX()</a></li>
+                <li class="Sub1"><a class="DocLink" href="#DmgDmo">Demo Project</a></li>
+                <li class="Sub1"><a class="DocLink" href="#conclsn">Conclusion and Links</a></li>
+            </ul>
+        </div>
+
+
+        <div class="MainPanel">
+        <div class="Documentation">
+            <img id="PluginPoster" class="DocImg" src="NavigationSystemAssets\NavigationSystem.svg"  alt="NavigationSystem"/>
+            <h1 class="PluginName" id="DmgSys">Damage System</h1>
+            <h2 class="Sub-Title1" id="WypntCmps">Damage Direction Indicator + Bleeding FX </h2>
+            <p class="Doc">The Damage System plugin provides a complete, modular solution for player damage feedback in FPS and TPS games. It includes two independent systems: a Damage Direction Indicator that shows where the damage came from, and a Bleeding FX post-process effect that splatters blood on the screen as the player takes damage.</p>
+            <h2 class="Sub-Title1" id="Types">System Overview</h2>
+
+            
+            <div class="BoxContainer">
+                <div class="GridBox2">
+                    <h3 class="BoxTitle">Damage Direction Indicator</h3>
+                    <p class="BoxDoc">A HUD widget that shows the direction of incoming damage using an on-screen indicator. Works in both FPS and TPS views.</p>
+                </div>
+                <div class="GridBox2">
+                    <h3 class="BoxTitle">Bleeding FX</h3>
+                    <p class="BoxDoc">A post-process material that splatters blood on the screen using a noise-driven texture. Intensity scales with damage.</p>
+                </div>
+            </div>
+
+
+            <div class="SingleBox">
+                <p class="SingleBoxDoc">Both systems work independently. You can use one, the other, or both together depending on your game's needs.</p>
+            </div>
+
+
+            <h2 class="Sub-Title1" id="DmgDir">Damage Direction Indicator</h2>
+            <p class="Doc">The Damage Direction Indicator is a HUD element that appears when the player takes damage. It shows the direction of the attacker relative to the player's camera, with a visual indicator that points toward the source of the damage.</p>
+            <img class="DocImg" id="WaypointImg" src="NavigationSystemAssets\Waypoint.svg" alt="Waypoint Image"/>
+            <h3 class="Sub-Title2" id="DmgRltdCls">Related Classes</h3>
+            <img class="DocImg" id="CompassClassesImg" src="DamageSystemAssets\DamageIndicatorClasses.svg" alt="Compass Classes Image"/>
+            <h3 class="Sub-Title2" id="DmgDirStp">How to Set up</h3>
+            <p class="Doc">1. Add the AC_IndicatorWidgetManager component to your Player Character.<br/><br/>2. In the component's Details panel, set the Max Num Of Indicator Elements variable.<br/>This value defines the maximum number of indicators that can appear on screen at the same time. When the limit is reached, new enemies will reuse the oldest available indicator instead of creating a new one.<br/><br/>
+            <img class="DocImg" id="IndicatorVarImg" src="DamageSystemAssets\DamageIndicatorVariable.svg" alt="MaxNumOfIndicator"/><br/><br/>
+            3. When damage is applied, call "AssignIndicatorToEnemy(AActor Enemy)" <br/><br/>
+            <img class="DocImg" id="AssignIndicatorFunctionImg" src="DamageSystemAssets\AssignIndicatorFunction.svg" alt="Waypoint classes"/></p>
+
+
+            
+
+    <!-- ====================================================== -->
+    <!-- COMPONENT HEADER                                        -->
+    <!-- ====================================================== -->
+
+    <h1 id="DmgDirAC">
+        AC_IndicatorWidgetManager
+        <small>Actor Component — Damage Direction Indicator Manager</small>
+    </h1>
+
+    <div class="component-header">
+        <div class="name">AC_IndicatorWidgetManager</div>
+
+        <div class="meta">
+            <div class="meta-item"><strong>Owner:</strong> Player Character</div>
+            <div class="meta-item"><strong>Type:</strong> Actor Component</div>
+        </div>
+
+        <div class="purpose">
+            Manages the Damage Direction Indicator widget and its pool of indicator
+            elements. This component creates the main damage frame widget on
+            <code>BeginPlay</code> and cleans it up on <code>EndPlay</code>.
+            It provides a centralized reference point for accessing the indicator
+            widget through the player character.
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- VARIABLES                                               -->
+    <!-- ====================================================== -->
+
+    <h2>Variables</h2>
+
+    <!-- Variable 1 -->
+    <div class="doc-card" id="DmgDirACVar1">
+        <div class="doc-card-header">
+            <span class="name">MaxNumOfIndicator</span>
+            <span class="type">(Integer)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Defines how many indicator elements the
+                <code>WBP_DamageIndicatorFrame</code> should create. This is the
+                maximum number of damage direction indicators that can appear on
+                screen at the same time.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Default Value</div>
+            <div class="value"><code>4</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Range</div>
+            <div class="value">
+                <code>1 – 20</code> (recommended) — Values above 20 are allowed but
+                may impact performance and clutter the HUD.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Effect</div>
+            <div class="value">
+                <ul>
+                    <li>- <strong>Lower values (1–3):</strong> Fewer simultaneous indicators. Good for minimal HUD designs.</li>
+                    <li>- <strong>Higher values (10–20):</strong> Many enemies can be tracked at once. Good for horde-style games.</li>
+                    <li>- If the limit is reached, the oldest indicator is recycled for the newest enemy.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Tip:</strong>
+                    Set this to match the maximum number of enemies that can
+                    realistically attack the player at the same time in your game.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 2 -->
+    <div class="doc-card" id="DmgDirACVar2">
+        <div class="doc-card-header">
+            <span class="name">IndicatorFrameRef</span>
+            <span class="type">(WBP_DamageIndicatorFrame)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Holds a reference to the <code>WBP_DamageIndicatorFrame</code> widget
+                that contains all indicator elements. This reference is created
+                automatically in <code>BeginPlay</code> and can be accessed by
+                other systems through the component.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Access</div>
+            <div class="value">
+                Get the component via <code>Get Component by Class</code> on the
+                player character, then access this variable to get the widget
+                reference.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Example</div>
+            <div class="value">
+                <div class="code-block">
+// Get the component from the player character
+Get Component by Class (AC_IndicatorWidgetManager)
+    → Get IndicatorFrameRef
+    → Call functions on WBP_DamageIndicatorFrame
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Important:</strong>
+                    <ul style="margin-top:6px;">
+                        <li>- The widget is created on <code>BeginPlay</code> and destroyed on <code>EndPlay</code>.</li>
+                        <li>- Always check <code>IsValid</code> before using this reference.</li>
+                        <li>- Do not manually set this variable — it is managed automatically.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- FUNCTIONS                                               -->
+    <!-- ====================================================== -->
+
+    <h2>Functions</h2>
+
+    <!-- Function 1 -->
+    <div class="doc-card" id="DmgDirACFunc1">
+        <div class="doc-card-header">
+            <span class="name">AddDamageFrameToViewPort</span>
+            <span class="type">()</span>
+            <span class="tag function">Function</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Creates the <code>WBP_DamageIndicatorFrame</code> widget, adds it to
+                the viewport, and stores a reference in <code>IndicatorFrameRef</code>.
+                This function is called automatically on <code>Event BeginPlay</code>.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Parameters</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Returns</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Called By</div>
+            <div class="value">
+                <ul>
+                    <li><code>Event BeginPlay</code> (automatically)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Note:</strong>
+                    You do not need to call this function manually. It is invoked
+                    automatically when the component is initialized.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Function 2 -->
+    <div class="doc-card" id="DmgDirACFunc2">
+        <div class="doc-card-header">
+            <span class="name">RemoveDamageIndicatorFrame</span>
+            <span class="type">()</span>
+            <span class="tag function">Function</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Removes the <code>WBP_DamageIndicatorFrame</code> widget from the
+                viewport. This function is called automatically on
+                <code>Component EndPlay</code> (e.g., when the character dies).
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Parameters</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Returns</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Called By</div>
+            <div class="value">
+                <ul>
+                    <li><code>Event EndPlay</code> (automatically)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Note:</strong>
+                    You do not need to call this function manually. It is invoked
+                    automatically when the character is destroyed or the level ends.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+       <h1 id="DmgDirWDmgFrame">
+        WBP_DamageIndicatorFrame
+        <small>User Widget — Indicator Pool and Enemy Pairing Manager</small>
+    </h1>
+
+    <div class="component-header">
+        <div class="name">WBP_DamageIndicatorFrame</div>
+
+        <div class="meta">
+            <div class="meta-item"><strong>Owner:</strong> AC_IndicatorWidgetManager</div>
+            <div class="meta-item"><strong>Type:</strong> User Widget (UMG)</div>
+            <div class="meta-item"><strong>Category:</strong> Damage System</div>
+        </div>
+
+        <div class="purpose">
+Manages the pool of indicator elements and their pairing with enemies. Creates all WBP_DamageIndicatorElement widgets on initialization and stores them in a pool. Assigns them to enemies when damage is taken and recycles them when enemies die.
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- VARIABLES                                               -->
+    <!-- ====================================================== -->
+
+    <h2 id="DmgDirWDmgFrameVar1">Variables</h2>
+
+    <!-- Variable 1 -->
+    <div class="doc-card">
+        <div class="doc-card-header">
+            <span class="name">AvailableIndicatorElements</span>
+            <span class="type">(Array of WBP_DamageIndicatorElement)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Stores all unassigned and free indicator elements. When an indicator element is assigned to an enemy, it is removed from this array and added to
+                <code>Enemy-IndicatorElementPair</code>. When an enemy dies, the element is removed from the map and returned to this array.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">SIZE</div>
+            <div class="value">Equal to <code>MaxNumOfIndicator</code>(set in <code>AC_IndicatorWidgetManager</code>).</div>
+        </div>
+
+        <div class="field">
+            <div class="label">MANAGED BY</div>
+            <div class="value">
+                - Populated on initialization.<br/>
+                - Elements are removed when assigned to an enemy.<br/>
+                - Elements are added back when an enemy dies.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Note:</strong>
+                    This array acts as a pool of reusable widgets. Widgets are not created or destroyed during gameplay 
+                    — they are recycled. This is essential for performance.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 2 -->
+    <div class="doc-card" id="DmgDirWDmgFrameVar2">
+        <div class="doc-card-header">
+            <span class="name">Enemy-IndicatorElementPair</span>
+            <span class="type">(Map: AActor → WBP_DamageIndicatorElement)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Stores the pairing between an enemy actor and the indicator element assigned to it.
+                Used to track which indicator belongs to which enemy, so the system can update it or recycle it when the enemy dies.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">KEYS</div>
+            <div class="value">
+                <code>AActor</code>_The enemy actor that dealt damage to the player.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Values</div>
+            <div class="value">
+                <code>WBP_DamageIndicatorElement</code>_The indicator element assigned to that enemy.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">MANAGED BY</div>
+            <div class="value">
+                <ul>
+                    <li>- Adds a pair when <code>AssignIndicatorToEnemy</code> is called.</li>
+                    <li>- Removes a pair when the enemy dies or is no longer tracked.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Important:</strong>
+                    <ul style="margin-top:6px;">
+                        <li>- If the enemy is destroyed, the map entry should be cleaned up to avoid invalid references.</li>
+                        <li>- Consider using a unique ID instead of an actor reference for more robust cleanup.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- FUNCTIONS                                               -->
+    <!-- ====================================================== -->
+
+    <h2 id="DmgDirWDmgFrameFunc1">Functions</h2>
+
+    <!-- Function 1 -->
+    <div class="doc-card">
+        <div class="doc-card-header">
+            <span class="name">AssignIndicatorToEnemy</span>
+            <span class="type">(AActor Enemy)</span>
+            <span class="tag function">Function</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Assigns an available indicator element to the given enemy.
+                 This is the main function to call when the player takes damage. 
+                 It creates a pair in <code>Enemy-IndicatorElementPair</code>  and calls <code>EnableDamageIndicator</code>.
+                 on the <code>WBP_DamageIndicatorElement</code>to rotate it toward the enemy.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Parameters</div>
+            <div class="value"><code>Enemy(AActor)</code> _ The enemy actor that dealt damage to the player. </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Returns</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Usage</div>
+            <div class="value">
+                Call this function from your damage-handling logic when the player
+                takes damage. Pass the enemy that caused the damage.
+            </div>
+        </div>
+
+              <div class="field">
+            <div class="label">Example</div>
+            <div class="value">
+                <div class="code-block">
+Event OnTakeAnyDamage (Damage Causer)
+    → Get AC_IndicatorWidgetManager (on Player Character)
+    → Get IndicatorFrameRef
+    → AssignIndicatorToEnemy
+        - Enemy: Damage Causer
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">what it does</div>
+            <div class="value">
+                <ul>
+                    <li>- Calls <code>EnableDamageIndicator</code> on the assigned <code>WBP_DamageIndicatorElement</code>.</li>
+                    <li>- Removes the element from <code>AvailableIndicatorElements</code>.</li>
+                    <li>- Adds the pair to <code>Enemy-IndicatorElementPair</code>.</li>
+                </ul>
+            </div>
+        </div>
+
+         <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Important:</strong>
+                    <ul style="margin-top:6px;">
+                        <li>- If the enemy already has an assigned indicator, the existing one is reused.</li>
+                        <li>- If no elements are available, the oldest pair is recycled.</li>
+                        <li>- The indicator rotates to face the enemy automatically.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <h1 id="DmgDirWLmnt">
+        WBP_DamageIndicatorElement
+        <small>User Widget — Single Damage Direction Indicator</small>
+    </h1>
+
+    <div class="component-header">
+        <div class="name">WBP_DamageIndicatorElement</div>
+
+        <div class="meta">
+            <div class="meta-item"><strong>Owner:</strong> WBP_DamageIndicatorFrame</div>
+            <div class="meta-item"><strong>Type:</strong> User Widget (UMG)</div>
+            <div class="meta-item"><strong>Category:</strong> Damage System</div>
+        </div>
+
+        <div class="purpose">
+            A single indicator element that rotates toward its paired enemy.
+            Each element is part of a pool managed by
+            <code>WBP_DamageIndicatorFrame</code>. When enabled, it follows
+            its enemy for a set duration, then returns to the pool.
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- VARIABLES                                               -->
+    <!-- ====================================================== -->
+
+    <h2>Variables</h2>
+
+    <!-- Variable 1 -->
+    <div class="doc-card" id="DmgDirWLmntVar1">
+        <div class="doc-card-header">
+            <span class="name">IndicatorTimer</span>
+            <span class="type">(Float)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Defines how long (in seconds) the indicator should follow its paired
+                enemy. When the timer expires, the widget is disabled and returned
+                to the <code>AvailableIndicatorElements</code> array in
+                <code>WBP_DamageIndicatorFrame</code>.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Default Value</div>
+            <div class="value"><code>2.0</code> seconds</div>
+        </div>
+
+        <div class="field">
+            <div class="label">Range</div>
+            <div class="value">
+                <code>0.5 – 5.0</code> (recommended) — Values below 0.5 make the
+                indicator hard to notice. Values above 5.0 may clutter the screen.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Effect</div>
+            <div class="value">
+                <ul>
+                    <li><strong>- Short duration (0.5–1.0s):</strong> Brief flash of direction. Good for fast-paced games.</li>
+                    <li><strong>- Long duration (3.0–5.0s):</strong> Persistent indicator. Good for tactical games.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Tip:</strong>
+                    This value is typically set in the parent widget
+                    (<code>WBP_DamageIndicatorFrame</code>) and passed to each
+                    element when it is created.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- FUNCTIONS                                               -->
+    <!-- ====================================================== -->
+
+    <h2>Functions</h2>
+
+    <!-- Function 1 (Internal) -->
+    <div class="doc-card" id="DmgDirWLmntFunc1">
+        <div class="doc-card-header">
+            <span class="name">EnableDamageIndicator</span>
+            <span class="type">(AActor EnemyRef)</span>
+            <span class="tag function">Function</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Makes the indicator's image widget visible and starts a timer for
+                updating the rotation of the element toward the paired enemy.
+                This function is called by <code>AssignIndicatorToEnemy</code>
+                and should <strong>NOT</strong> be called directly.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Parameters</div>
+            <div class="value">
+                <ul>
+                    <li><code>EnemyRef (AActor)</code> — The enemy actor this indicator should follow.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Returns</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Usage</div>
+            <div class="value">
+                <div class="notes-box warning">
+                    <strong>⚠️ DO NOT CALL THIS FUNCTION DIRECTLY.</strong>
+                    <br />
+                    Use <code>AssignIndicatorToEnemy</code> instead.
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Why Internal</div>
+            <div class="value">
+                <ul>
+                    <li>- This function assumes the indicator element has already been prepared by the frame.</li>
+                    <li>- Calling it directly may result in unpaired indicators or broken cleanup logic.</li>
+                    <li>- It does not handle pooling or enemy pairing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Called By</div>
+            <div class="value">
+                <ul>
+                    <li><code>AssignIndicatorToEnemy</code> (WBP_DamageIndicatorFrame)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box warning">
+                    <strong>Tip:</strong>
+                    If you need to show an indicator, call
+                    <code>AssignIndicatorToEnemy</code> instead. This function
+                    exists so that the frame can control the lifecycle of each
+                    indicator element.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Function 2 -->
+    <div class="doc-card" id="DmgDirWLmntFunc2">
+        <div class="doc-card-header">
+            <span class="name">DisableIndicatorElement</span>
+            <span class="type">(AActor EnemyRef)</span>
+            <span class="tag function">Function</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Hides the indicator's image widget, clears the rotation timer,
+                and resets the element. This function is called when the paired
+                enemy becomes invalid (e.g., the enemy dies) or when the
+                <code>IndicatorTimer</code> expires.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Parameters</div>
+            <div class="value"><code>(AActor EnemyRef)</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Returns</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Called By</div>
+            <div class="value">
+                <ul>
+                    <li>- its own, checks if enemy ref is invalid(when the enemy dies).</li>
+                    <li>- The <code>IndicatorTimer</code> (when it expires).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Note:</strong>
+                    After this function runs, the element is returned to the pool
+                    (<code>AvailableIndicatorElements</code>) of WBP_DamageIndicatorFrame and can be reused
+                    for another enemy.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+          
+            <h2 class="Sub-Title1" id="DmgBldFx">Bleeding FX</h2>
+            <p class="Doc">The Bleeding FX is a post-process material that splatters blood on the screen when the player takes damage. The effect uses a noise-driven texture mask to create an organic, non-repetitive blood pattern that feels natural and immersive.</p>
+            <img class="DocImg" id="CompassImg" src="NavigationSystemAssets\Compass.svg" alt="Compass Image"/>
+            <h3 class="Sub-Title2" id="DmgBldFXRltdCls">Related Classes</h3>
+            <img class="DocImg" id="CompassClassesImg" src="DamageSystemAssets\BleedingFXClasses.svg" alt="Compass Classes Image"/>
+            <h3 class="Sub-Title2" id="DmgBldFXStp">How to use</h3>
+            <p class="Doc">1. Add "AC_Blood Fx" component to player character<br/><br/>2. call "BleedingFX(float BloodIntensity, float duration)" on damage applied
+                <br/><br/><img class="DocImg" id="BleedingFXFunctionImg" src="DamageSystemAssets\BleedingFXFunction.svg" alt="AC_CompassHUDManager Image"/></p>
+
+
+
+
+             <h1 id="DmgBldFXAC">
+        AC_BloodFX
+        <small>Actor Component — Bleeding FX Manager</small>
+    </h1>
+
+    <div class="component-header">
+        <div class="name">AC_BloodFX</div>
+
+        <div class="meta">
+            <div class="meta-item"><strong>Owner:</strong> Player Character</div>
+            <div class="meta-item"><strong>Type:</strong> Actor Component</div>
+            <div class="meta-item"><strong>Category:</strong> Damage System</div>
+        </div>
+
+        <div class="purpose">
+            Manages the Bleeding FX post-process material applied to the player's
+            camera. Controls blood intensity and fading through a Material
+            Parameter Collection (<code>MPC_Blood</code>). The material is set
+            on the camera on <code>BeginPlay</code> and updated during gameplay.
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- VARIABLES                                               -->
+    <!-- ====================================================== -->
+
+    <h2>Variables</h2>
+
+    <!-- Variable 1 -->
+    <div class="doc-card" id="DmgBldFXACVar1">
+        <div class="doc-card-header">
+            <span class="name">BloodFade</span>
+            <span class="type">(Float)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Controls the current fade amount of the blood effect. This value
+                is clamped between <code>0</code> and <code>100</code> and is
+                used to drive the opacity of the blood material.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Range</div>
+            <div class="value"><code>0 – 100</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box warning">
+                    <strong>Do Not Change:</strong>
+                    This variable is managed internally by the component.
+                    Modifying it manually may break the fading logic.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 2 -->
+    <div class="doc-card" id="DmgBldFXACVar2">
+        <div class="doc-card-header">
+            <span class="name">TimerParam</span>
+            <span class="type">(Float)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Used for fading the blood effect over time. This value is
+                incremented or decremented to create the fade animation.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box warning">
+                    <strong>Do Not Change:</strong>
+                    This variable is managed internally by the component.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 3 -->
+    <div class="doc-card" id="DmgBldFXACVar3">
+        <div class="doc-card-header">
+            <span class="name">MinBloodFade</span>
+            <span class="type">(Float)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                The minimum value used in the <strong>Map Range Clamped</strong>
+                node for blood fading. Default value is <code>1.0</code>.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Range</div>
+            <div class="value"><code>1.0</code> (default)</div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Note:</strong>
+                    This is used with <code>MaxBloodFade</code> to map the fade
+                    range. You typically don't need to change this.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 4 -->
+    <div class="doc-card" id="DmgBldFXACVar4">
+        <div class="doc-card-header">
+            <span class="name">MaxBloodFade</span>
+            <span class="type">(Float)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                The maximum value used in the <strong>Map Range Clamped</strong>
+                node for blood fading. Default value is <code>1.7</code>.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Range</div>
+            <div class="value"><code>1.7</code> (default)</div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Note:</strong>
+                    This is used with <code>MinBloodFade</code> to map the fade
+                    range. You typically don't need to change this.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 5 -->
+    <div class="doc-card" id="DmgBldFXACVar5">
+        <div class="doc-card-header">
+            <span class="name">BloodIntensity</span>
+            <span class="type">(Float)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Defines how much blood should be splatted on screen. This value
+                is passed to the material via the <code>MPC_Blood</code> and
+                controls the overall opacity of the blood effect.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Range</div>
+            <div class="value"><code>0 – 100</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Effect</div>
+            <div class="value">
+                <ul>
+                    <li><strong>Low values (10–30):</strong> Light blood splatter. Good for minor damage.</li>
+                    <li><strong>Medium values (40–70):</strong> Moderate blood. Good for sustained damage.</li>
+                    <li><strong>High values (80–100):</strong> Heavy blood. Good for critical damage or near-death.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Tip:</strong>
+                    This value is typically set by the
+                    <code>BleedingFX</code> function based on the damage taken.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 6 -->
+    <div class="doc-card" id="DmgBldFXACVar6">
+        <div class="doc-card-header">
+            <span class="name">BleedingTime</span>
+            <span class="type">(Float)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Defines how many seconds the blood should remain on screen
+                before it begins to fade. This value is passed to the
+                <code>BleedingFX</code> function.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Range</div>
+            <div class="value"><code>1.0 – 10.0</code> (recommended)</div>
+        </div>
+
+        <div class="field">
+            <div class="label">Effect</div>
+            <div class="value">
+                <ul>
+                    <li><strong>Short duration (1–3s):</strong> Quick fade. Good for fast-paced games.</li>
+                    <li><strong>Long duration (5–10s):</strong> Persistent blood. Good for immersive, tactical games.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Tip:</strong>
+                    Set this value when calling <code>BleedingFX</code> to control
+                    how long the blood stays on screen.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Variable 7 -->
+    <div class="doc-card" id="DmgBldFXACVar7">
+        <div class="doc-card-header">
+            <span class="name">IsBleeding</span>
+            <span class="type">(Boolean)</span>
+            <span class="tag variable">Variable</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Tracks whether the player is currently bleeding. Used by the
+                <code>BleedingFX</code> function to decide whether to set a
+                random normal for the material (no blood on screen) or to
+                increase the blood over the existing one.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Effect</div>
+            <div class="value">
+                <ul>
+                    <li><strong>True:</strong> Blood is already on screen. New blood is added on top of the existing effect.</li>
+                    <li><strong>False:</strong> No blood on screen. A new blood effect is created with a random normal.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Note:</strong>
+                    This is managed internally by the component. You typically
+                    don't need to change it.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- FUNCTIONS                                               -->
+    <!-- ====================================================== -->
+
+    <h2>Functions</h2>
+
+    <!-- Function 1 -->
+    <div class="doc-card" id="DmgBldFXACFunc1">
+        <div class="doc-card-header">
+            <span class="name">BleedingFX</span>
+            <span class="type">(float BloodIntensity, float Duration)</span>
+            <span class="tag function">Function</span>
+        </div>
+
+        <div class="field">
+            <div class="label">Description</div>
+            <div class="value">
+                Splats blood on the screen and fades it over the specified
+                duration. This is the main function to call when the player
+                takes damage.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Parameters</div>
+            <div class="value">
+                <ul>
+                    <li><code>BloodIntensity (Float)</code> — How much blood should be splatted on screen. Range: <code>0 – 100</code>.</li>
+                    <li><code>Duration (Float)</code> — How many seconds the blood should remain on screen before fading.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Returns</div>
+            <div class="value"><code>None</code></div>
+        </div>
+
+        <div class="field">
+            <div class="label">Usage</div>
+            <div class="value">
+                Call this function from your damage-handling logic when the
+                player takes damage. Pass the desired intensity and duration.
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Example</div>
+            <div class="value">
+                <div class="code-block">
+Event OnTakeAnyDamage (Damage Amount)
+    → Get AC_BloodFX (on Player Character)
+    → BleedingFX
+        - BloodIntensity: Damage Amount * 2.0
+        - Duration: 3.0
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="label">Notes</div>
+            <div class="value">
+                <div class="notes-box">
+                    <strong>Important:</strong>
+                    <ul style="margin-top:6px;">
+                        <li>If blood is already on screen, the new blood is added on top of the existing effect.</li>
+                        <li>The <code>IsBleeding</code> variable is used internally to determine whether to create a new effect or add to an existing one.</li>
+                        <li>The blood fades over the specified duration.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            <h2 class="Sub-Title1" id="DmgDmo">Demo Porject</h2>
+            <p class="Doc">The plugin includes a fully integrated demo project that demonstrates how to use the Damage System in a real gameplay scenario. It serves as a practical case study for integrating the plugin into your own project.</p>
+            <img class="DocImg" id="DemoFilesImg" src="DamageSystemAssets\DemoProject.svg" alt="Deom Files Image"/>
+            <h3 class="Sub-Title2" id="WhtsIncld">What's Included</h3>
+            <p class="Doc">- Weapons that fire projectiles with a AC_DamageComponent that applies damage on hit.<br/>
+            - Player Character, has AC_HealthComponent that calls the <strong>Damage System functions</strong> (Indicator and BleedingFX).<br/>
+            - Falling Damage System that applies damage when the player falls from a great height.
+            </p>
+
+            <h3 class="Sub-Title2" id="How2Run">How to Run the Demo</h3>
+            <p class="Doc">1. Set the BP_DamageSystemGameMode as Defautl Game mode <br/>
+            2. Open Lvl_Damage in Demo files<br/>
+            3. Play the Demo</p>
+
+            
+            <div class="ConclusionDiv" id="conclsn">
+                <div class="ContentDiv">
+                    <h2 class="Conclusion">Damage System plugin<br/> is now available on Fab</h2>
+                    <a class="FabLink" href="https://www.fab.com/listings/b0e60db0-27a2-4575-9922-cc45bc0fdbbc">Get Plugin</a>
+                    <a class="Email">Diamind.group@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+
+    <footer class="docuFooter">
+        <ul class="dFooterUl">
+            <li ><a class="dFooterA" href="../../index.html#FirstPlugin">Documentations</a></li>
+            <li ><a class="dFooterA" href="../../index.html">About Us</a></li>
+            <li ><a class="dFooterA" href="../../index.html#FirstPlugin">Plugins</a></li>
+            <li ><a class="dFooterA" href="../../contact.html">Help</a></li>
+            <li ><a class="dFooterA" href="https://www.fab.com/sellers/Diamind%20Group">Fab</a></li>
+        </ul>
+        <div class="IconContainer">
+            <img src="..\..\assets\Diamind\FabIcon.svg" class="footerIcon" alt="FabIcon"/>
+            <img src="..\..\assets\Diamind\UnrealIcon.svg" class="footerIcon" alt="UEIcon"/>
+            <img src="..\..\assets\Diamind\DiamindIcon.svg" class="footerIcon" alt="DiamindIcon"/>
+        </div>
+    </footer>
+<script src="logics.js"></script>
+</body>
+</html>
